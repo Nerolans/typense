@@ -13,11 +13,10 @@ func _process(delta):
 		add_child(newFollower)
 		timer = 0
 		
-	
+
 func _input(event):
 	if event.is_pressed():
 		print("Une touche a été enfoncée : ", event.as_text())
 		var oldest = get_child(0)
 		print(oldest.loseLive())
-		
 		

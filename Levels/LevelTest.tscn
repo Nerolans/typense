@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dcx4g2pfea0sj" path="res://map.png" id="1_7b0me"]
 [ext_resource type="Script" uid="uid://s726oisoln5h" path="res://Levels/pathSpawner.gd" id="2_7b0me"]
 [ext_resource type="PackedScene" uid="uid://b65s4her4y3wh" path="res://Levels/enemyFollow.tscn" id="3_p2k11"]
+[ext_resource type="PackedScene" uid="uid://d33abn40a3m3p" path="res://Levels/turret.tscn" id="4_pew5n"]
 
 [sub_resource type="Curve2D" id="Curve2D_sbrn2"]
 _data = {
@@ -17,9 +18,17 @@ position = Vector2(512, 512)
 texture = ExtResource("1_7b0me")
 
 [node name="Path2D" type="Path2D" parent="." unique_id=592466089]
+light_mask = 2
+visibility_layer = 2
 curve = SubResource("Curve2D_sbrn2")
 script = ExtResource("2_7b0me")
 
 [node name="enemy1follow" parent="Path2D" unique_id=2022373029 instance=ExtResource("3_p2k11")]
 position = Vector2(608, 27)
 rotation = 1.5783719
+
+[node name="turret" parent="." unique_id=107194994 groups=["enemies"] instance=ExtResource("4_pew5n")]
+light_mask = 0
+visibility_layer = 2
+position = Vector2(347, 73)
+

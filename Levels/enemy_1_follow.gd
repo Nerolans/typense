@@ -5,6 +5,8 @@ extends PathFollow2D
 func _ready():
 	$Enemy.stop()
 	$Enemy.play("down")
+	await get_tree().process_frame
+	add_to_group("enemies")
 	
 func loseLive():
 	var label = get_child(1)
@@ -65,4 +67,3 @@ func _process(delta):
 		$Enemy.play("left")
 	if progress_ratio == 1:
 		queue_free()
-	
