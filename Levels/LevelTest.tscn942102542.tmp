@@ -13,7 +13,6 @@ _data = {
 point_count = 15
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sbrn2"]
-size = Vector2(64, 64)
 
 [node name="LevelTest" type="Node2D" unique_id=1823012563]
 
@@ -33,14 +32,12 @@ rotation = 1.5783719
 script = ExtResource("4_p2k11")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=106989070]
-position = Vector2(352, 352)
 texture = ExtResource("5_pew5n")
 hframes = 5
 vframes = 5
 frame = 23
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=729036824]
-position = Vector2(352, 352)
 shape = SubResource("RectangleShape2D_sbrn2")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Area2D" unique_id=180128960]
@@ -71,9 +68,3 @@ layout_mode = 2
 
 [node name="BtnSell" type="Button" parent="Area2D/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=336555551]
 layout_mode = 2
-
-[node name="GoldLabel" type="Label" parent="Area2D/CanvasLayer" unique_id=1864503427]
-offset_left = 947.0
-offset_top = 996.0
-offset_right = 987.0
-offset_bottom = 1019.0

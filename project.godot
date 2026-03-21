@@ -15,13 +15,17 @@ run/main_scene="uid://cq3k3yq2rqcax"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Money="*uid://bmjn0mj4uqp20"
+
 [display]
 
-window/size/viewport_width=1025
+window/size/viewport_width=1024
 window/size/viewport_height=1024
 window/size/maximize_disabled=true
-window/size/window_width_override=2048
-window/size/window_height_override=2048
+window/size/window_width_override=1024
+window/size/window_height_override=1024
 window/stretch/mode="canvas_items"
 
 [physics]
