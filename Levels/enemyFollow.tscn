@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b65s4her4y3wh"]
+
+[ext_resource type="Script" uid="uid://c2yyadk42xbl8" path="res://Levels/enemy_1_follow.gd" id="1_2c7xp"]
+[ext_resource type="PackedScene" uid="uid://b2kje8lx8udrp" path="res://enemy.tscn" id="2_g2ee1"]
+
+[node name="enemy1follow" type="PathFollow2D" unique_id=2022373029]
+rotation = 1.5707964
+rotates = false
+loop = false
+script = ExtResource("1_2c7xp")
+runSpeed = 50
+
+[node name="Enemy" parent="." unique_id=1347766483 instance=ExtResource("2_g2ee1")]
+rotation = -1.5707964
+frame_progress = 0.27828547
+script = null

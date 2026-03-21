@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cq3k3yq2rqcax"]
+
+[ext_resource type="Texture2D" uid="uid://dcx4g2pfea0sj" path="res://map.png" id="1_7b0me"]
+[ext_resource type="Script" uid="uid://s726oisoln5h" path="res://Levels/pathSpawner.gd" id="2_7b0me"]
+[ext_resource type="PackedScene" uid="uid://b65s4her4y3wh" path="res://Levels/enemyFollow.tscn" id="3_p2k11"]
+
+[sub_resource type="Curve2D" id="Curve2D_sbrn2"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 608, 27, 0, 0, 0, 0, 607, 159, 0, 0, 0, 0, 356, 161, 0, 0, 0, 0, 353, 287, 0, 0, 0, 0, 480, 284, 0, 0, 0, 0, 480, 485, 0, 0, 0, 0, 288, 486, 0, 0, 0, 0, 285, 610, 0, 0, 0, 0, 673, 606, 0, 0, 0, 0, 671, 481, 0, 0, 0, 0, 800, 479, 0, 0, 0, 0, 802, 802, 0, 0, 0, 0, 671, 803, 0, 0, 0, 0, 671, 930, 0, 0, 0, 0, 610, 928)
+}
+point_count = 15
+
+[node name="LevelTest" type="Node2D" unique_id=1823012563]
+
+[node name="background" type="Sprite2D" parent="." unique_id=1347524578]
+position = Vector2(512, 512)
+texture = ExtResource("1_7b0me")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=592466089]
+curve = SubResource("Curve2D_sbrn2")
+script = ExtResource("2_7b0me")
+
+[node name="enemy1follow" parent="Path2D" unique_id=2022373029 instance=ExtResource("3_p2k11")]
+position = Vector2(608, 27)

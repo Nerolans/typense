@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Typense"
-run/main_scene="uid://d3c578viknhxj"
+run/main_scene="uid://cq3k3yq2rqcax"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
