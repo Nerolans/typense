@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c2yyadk42xbl8" path="res://Levels/enemy_1_follow.gd" id="1_2c7xp"]
 [ext_resource type="PackedScene" uid="uid://b2kje8lx8udrp" path="res://enemy.tscn" id="2_g2ee1"]
+[ext_resource type="Script" uid="uid://y5p3yb0g0io2" path="res://Levels/rich_text_label.gd" id="3_g2ee1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2c7xp"]
 size = Vector2(55.5, 51)
@@ -11,7 +12,6 @@ rotation = 1.5707964
 rotates = false
 loop = false
 script = ExtResource("1_2c7xp")
-runSpeed = 50
 
 [node name="Enemy" parent="." unique_id=1347766483 instance=ExtResource("2_g2ee1")]
 rotation = -1.5707964
@@ -26,3 +26,15 @@ collision_mask = 0
 visibility_layer = 2
 position = Vector2(0.7500011, -0.49999812)
 shape = SubResource("RectangleShape2D_2c7xp")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=794207116]
+offset_left = 21.000008
+offset_top = 155.0
+offset_right = 331.0
+offset_bottom = 179.0
+rotation = -1.5707964
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "coop"
+scroll_active = false
+horizontal_alignment = 1
+script = ExtResource("3_g2ee1")

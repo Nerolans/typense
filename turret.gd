@@ -23,8 +23,9 @@ func _physics_process(_delta):
 		
 		if rayCast.is_colliding():
 			var collider = rayCast.get_collider()
-			if collider.is_in_group("enemies") or collider.get_parent().is_in_group("enemies"):
-				gunSprite.rotation = angle_to_target+3.14/2
+			
+			if collider and (collider.is_in_group("enemies") or collider.get_parent().is_in_group("enemies")):
+				gunSprite.rotation = angle_to_target+3.1415/2
 				if reloadTimer.is_stopped():
 					shoot()
 					

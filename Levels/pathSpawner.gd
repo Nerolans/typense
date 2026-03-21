@@ -4,19 +4,23 @@ var timer = 0
 @export var spawnTime = 5
 
 var follower:PackedScene = preload("res://Levels/enemyFollow.tscn")
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	timer = timer + delta
-	
+
 	if(timer > spawnTime):
 		var newFollower = follower.instantiate()
+		newFollower.runSpeed = 100
 		add_child(newFollower)
 		timer = 0
-		
+
+func sort_childrens(a, b):
+	return a.progress > b.progress
 
 func _input(event):
 	if event.is_pressed():
-		print("Une touche a été enfoncée : ", event.as_text())
-		var oldest = get_child(0)
-		print(oldest.loseLive())
-		
+		if get_child_count() != 0:
+			var childs = get_children()
+			childs.sort_custom(sort_childrens)
+			var oldest = childs[0]
+			if event.as_text() == oldest.getlastChr():
+				oldest.loseLive()

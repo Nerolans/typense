@@ -5,24 +5,36 @@ extends PathFollow2D
 func _ready():
 	$Enemy.stop()
 	$Enemy.play("down")
-	await get_tree().process_frame
-	add_to_group("enemies")
-	
+
 func loseLive():
-	var label = get_child(1)
-	print(label.lives)
-	label.lives = label.lives-1
-	#label.font_color = Color.WHITE
-	for c in label.text:
-		print(c)
-		
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+	var label = get_child(2)
+	label.lives -= 1
+	var oldWord = label.text
+	var newWord = ""
+
+	for i in range(oldWord.length(), 0, -1):
+		if i > label.lives + 1:
+			newWord += "[color=white]"+oldWord[oldWord.length()-i]+"[/color]"
+		else:
+			newWord += "[color=black]"+oldWord[oldWord.length()-i]+"[/color]"
+
+	label.parse_bbcode(newWord)
+
+	if label.lives < 0:
+		queue_free()
+
+func getlastChr()->String:
+	var label = get_child(2)
+	var chr = label.text[label.text.length()-label.lives-1]
+	return chr
+
+
+
 func _process(delta):
-	
+
 	progress = (progress + runSpeed * delta)
 	var progressConc = snapped(progress,1)
-	
+
 	if progressConc == 0:
 		$Enemy.stop()
 		$Enemy.play("down")

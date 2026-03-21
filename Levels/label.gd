@@ -1,18 +1,22 @@
-extends Label
+extends Path2D
 
-var lives = 0
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	var file = FileAccess.open("res://list.txt", FileAccess.READ)
-	var content = file.get_as_text()
-	var word = content.split('\n')
-	var rdmNumber = randi() % 500
-	text = word[rdmNumber]
-	lives = text.length()-1
-	
-	
+var timer = 0
+@export var spawnTime = 5
 
-
+var follower:PackedScene = preload("res://Levels/enemyFollow.tscn")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _process(delta):
+	timer = timer + delta
+	
+	if(timer > spawnTime):
+		var newFollower = follower.instantiate()
+		add_child(newFollower)
+		timer = 0
+		
+
+func _input(event):
+	if event.is_pressed():
+		print("Une touche a été enfoncée : ", event.as_text())
+		var oldest = get_child(0)
+		print(oldest.loseLive())
+		
