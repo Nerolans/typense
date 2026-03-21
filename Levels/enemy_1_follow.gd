@@ -6,10 +6,21 @@ func _ready():
 	$Enemy.stop()
 	$Enemy.play("down")
 	
+func loseLive():
+	var label = get_child(1)
+	print(label.lives)
+	label.lives = label.lives-1
+	#label.font_color = Color.WHITE
+	for c in label.text:
+		print(c)
+		
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
 	progress = (progress + runSpeed * delta)
 	var progressConc = snapped(progress,1)
+	
 	if progressConc == 0:
 		$Enemy.stop()
 		$Enemy.play("down")

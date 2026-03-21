@@ -140,5 +140,5 @@ func _process(delta: float) -> void:
 [node name="Enemy" type="AnimatedSprite2D" unique_id=1347766483]
 sprite_frames = SubResource("SpriteFrames_4gyqm")
 animation = &"down"
-frame_progress = 0.105151735
+frame_progress = 0.7985296
 script = SubResource("GDScript_7k104")
