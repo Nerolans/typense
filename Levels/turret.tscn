@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://d33abn40a3m3p"]
+[gd_scene format=3 uid="uid://ddal1c1w7x4f2"]
 
 [ext_resource type="Script" uid="uid://caixpsw5vewgf" path="res://turret.gd" id="1_dgd6u"]
-[ext_resource type="PackedScene" uid="uid://dj8ieoe2fmwgj" path="res://Levels/bullet.tscn" id="2_eqv6u"]
+[ext_resource type="PackedScene" path="res://Levels/bullet.tscn" id="2_eqv6u"]
 [ext_resource type="Texture2D" uid="uid://bnsbfr61u3c38" path="res://spriteSheet.png" id="3_ehpjk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oo162"]
@@ -35,6 +35,7 @@ collide_with_areas = true
 collide_with_bodies = false
 
 [node name="ReloadTimer" type="Timer" parent="RayCast2D" unique_id=48100946]
+wait_time = 0.04
 one_shot = true
 
 [connection signal="timeout" from="RayCast2D/ReloadTimer" to="." method="_on_reload_timer_timeout"]

@@ -1,6 +1,6 @@
 extends PathFollow2D
 
-@export var runSpeed = 20
+@export var runSpeed = 40
 
 func _ready():
 	$Enemy.stop()

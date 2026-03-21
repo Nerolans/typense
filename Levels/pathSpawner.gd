@@ -1,7 +1,7 @@
 extends Path2D
 
 var timer = 0
-@export var spawnTime = 5
+@export var spawnTime = 0.1
 
 var follower:PackedScene = preload("res://Levels/enemyFollow.tscn")
 func _process(delta):

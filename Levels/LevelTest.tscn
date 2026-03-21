@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b65s4her4y3wh" path="res://Levels/enemyFollow.tscn" id="3_p2k11"]
 [ext_resource type="Script" uid="uid://wvspadqttau4" path="res://Levels/area_2d.gd" id="4_p2k11"]
 [ext_resource type="Texture2D" uid="uid://bnsbfr61u3c38" path="res://spriteSheet.png" id="5_pew5n"]
+[ext_resource type="PackedScene" path="res://Levels/turret.tscn" id="6_sbrn2"]
 
 [sub_resource type="Curve2D" id="Curve2D_sbrn2"]
 _data = {
@@ -77,3 +78,6 @@ offset_left = 947.0
 offset_top = 996.0
 offset_right = 987.0
 offset_bottom = 1019.0
+
+[node name="turret" parent="." unique_id=107194994 instance=ExtResource("6_sbrn2")]
+position = Vector2(354, 93)

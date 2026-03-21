@@ -31,14 +31,14 @@ func _physics_process(_delta):
 					
 
 func shoot():
-	print("PEW")
+	
 	
 	if BULLET:
 		var bullet: Node2D = BULLET.instantiate()
 		bullet.global_rotation = rayCast.global_rotation
 		get_tree().current_scene.add_child(bullet)
 		bullet.global_position = global_position
-		print("timer started")
+		
 	
 	reloadTimer.start()
 
@@ -57,5 +57,4 @@ func find_target():
 	return new_target
 	
 func _on_reload_timer_timeout():
-	print("timer fini")
 	rayCast.enabled = true
