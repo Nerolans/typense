@@ -21,4 +21,6 @@ curve = SubResource("Curve2D_sbrn2")
 script = ExtResource("2_7b0me")
 
 [node name="enemy1follow" parent="Path2D" unique_id=2022373029 instance=ExtResource("3_p2k11")]
-position = Vector2(608, 27)
+position = Vector2(671.93787, 539.6191)
+rotation = 1.5783719
+progress = 1607.53

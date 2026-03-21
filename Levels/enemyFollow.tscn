@@ -12,5 +12,5 @@ runSpeed = 50
 
 [node name="Enemy" parent="." unique_id=1347766483 instance=ExtResource("2_g2ee1")]
 rotation = -1.5707964
-frame_progress = 0.27828547
+frame_progress = 0.0
 script = null

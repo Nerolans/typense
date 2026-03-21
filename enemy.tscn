@@ -2,21 +2,21 @@
 
 [ext_resource type="Texture2D" uid="uid://bnsbfr61u3c38" path="res://spriteSheet.png" id="1_7k104"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h2yge"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7k104"]
 atlas = ExtResource("1_7k104")
 region = Rect2(0, 128, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1bvp3"]
-atlas = ExtResource("1_7k104")
-region = Rect2(64, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lquwl"]
-atlas = ExtResource("1_7k104")
-region = Rect2(0, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7mycd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4gyqm"]
 atlas = ExtResource("1_7k104")
 region = Rect2(256, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qi2p4"]
+atlas = ExtResource("1_7k104")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iifgy"]
+atlas = ExtResource("1_7k104")
+region = Rect2(64, 128, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_272bh"]
 atlas = ExtResource("1_7k104")
@@ -62,16 +62,16 @@ region = Rect2(256, 192, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h2yge")
+"texture": SubResource("AtlasTexture_7k104")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1bvp3")
+"texture": SubResource("AtlasTexture_4gyqm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lquwl")
+"texture": SubResource("AtlasTexture_qi2p4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7mycd")
+"texture": SubResource("AtlasTexture_iifgy")
 }],
 "loop": true,
 "name": &"down",
@@ -140,4 +140,5 @@ func _process(delta: float) -> void:
 [node name="Enemy" type="AnimatedSprite2D" unique_id=1347766483]
 sprite_frames = SubResource("SpriteFrames_4gyqm")
 animation = &"down"
+frame_progress = 0.105151735
 script = SubResource("GDScript_7k104")
