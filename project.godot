@@ -11,8 +11,18 @@ config_version=5
 [application]
 
 config/name="Typense"
+run/main_scene="uid://d3c578viknhxj"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1024
+window/size/viewport_height=1024
+window/size/maximize_disabled=true
+window/size/window_width_override=1024
+window/size/window_height_override=1024
+window/stretch/mode="canvas_items"
 
 [physics]
 
@@ -20,4 +30,5 @@ config/icon="res://icon.svg"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
