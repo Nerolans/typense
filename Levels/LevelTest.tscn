@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://fc4w8y8voijj" path="res://spriteSheet78.png" id="6_flbus"]
 [ext_resource type="PackedScene" uid="uid://ddal1c1w7x4f2" path="res://Levels/turret.tscn" id="6_sbrn2"]
 [ext_resource type="PackedScene" uid="uid://bnq8bk3qbs4my" path="res://core.tscn" id="8_d2xh1"]
+[ext_resource type="Script" uid="uid://cdwiqjoxi155f" path="res://core.gd" id="9_cc3a2"]
 
 [sub_resource type="Curve2D" id="Curve2D_sbrn2"]
 _data = {
@@ -846,5 +847,4 @@ theme_override_font_sizes/font_size = 30
 [node name="Core" parent="." unique_id=1307836770 instance=ExtResource("8_d2xh1")]
 position = Vector2(615, 923)
 scale = Vector2(1.765625, 1.765625)
-animation = &"0"
-script = null
+script = ExtResource("9_cc3a2")
