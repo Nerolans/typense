@@ -173,6 +173,664 @@ layout_mode = 2
 [node name="TurretSpawn1" type="Marker2D" parent="Area2D3" unique_id=870188166]
 position = Vector2(545, 290)
 
+[node name="Area2D4" type="Area2D" parent="." unique_id=1625086901]
+script = ExtResource("4_p2k11")
+TURRET_FIRE = ExtResource("6_sbrn2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D4" unique_id=1331807524]
+position = Vector2(541, 478)
+texture = ExtResource("6_flbus")
+hframes = 9
+vframes = 9
+frame = 77
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4" unique_id=496306981]
+position = Vector2(541, 478)
+shape = SubResource("RectangleShape2D_sbrn2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Area2D4" unique_id=1113199881]
+
+[node name="PanelContainer" type="PanelContainer" parent="Area2D4/CanvasLayer" unique_id=2015674654]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Area2D4/CanvasLayer/PanelContainer" unique_id=360171563]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Area2D4/CanvasLayer/PanelContainer/VBoxContainer" unique_id=802037396]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Area2D4/CanvasLayer/PanelContainer/VBoxContainer" unique_id=1525664411]
+layout_mode = 2
+
+[node name="BtnTower1" type="Button" parent="Area2D4/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1957683222]
+layout_mode = 2
+
+[node name="BtnTower2" type="Button" parent="Area2D4/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=962721092]
+layout_mode = 2
+
+[node name="BtnSell" type="Button" parent="Area2D4/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1792223688]
+layout_mode = 2
+
+[node name="TurretSpawn1" type="Marker2D" parent="Area2D4" unique_id=1825586287]
+position = Vector2(541, 478)
+
+[node name="Area2D5" type="Area2D" parent="." unique_id=928095848]
+script = ExtResource("4_p2k11")
+TURRET_FIRE = ExtResource("6_sbrn2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D5" unique_id=1832469831]
+position = Vector2(351, 543)
+texture = ExtResource("6_flbus")
+hframes = 9
+vframes = 9
+frame = 77
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5" unique_id=698935011]
+position = Vector2(351, 543)
+shape = SubResource("RectangleShape2D_sbrn2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Area2D5" unique_id=784768430]
+
+[node name="PanelContainer" type="PanelContainer" parent="Area2D5/CanvasLayer" unique_id=1982277057]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Area2D5/CanvasLayer/PanelContainer" unique_id=1630443062]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Area2D5/CanvasLayer/PanelContainer/VBoxContainer" unique_id=1562026497]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Area2D5/CanvasLayer/PanelContainer/VBoxContainer" unique_id=102904195]
+layout_mode = 2
+
+[node name="BtnTower1" type="Button" parent="Area2D5/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=514291767]
+layout_mode = 2
+
+[node name="BtnTower2" type="Button" parent="Area2D5/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=34427305]
+layout_mode = 2
+
+[node name="BtnSell" type="Button" parent="Area2D5/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=790773730]
+layout_mode = 2
+
+[node name="TurretSpawn1" type="Marker2D" parent="Area2D5" unique_id=1502216665]
+position = Vector2(351, 543)
+
+[node name="Area2D6" type="Area2D" parent="." unique_id=1449464687]
+script = ExtResource("4_p2k11")
+TURRET_FIRE = ExtResource("6_sbrn2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D6" unique_id=267160271]
+position = Vector2(416, 543)
+texture = ExtResource("6_flbus")
+hframes = 9
+vframes = 9
+frame = 77
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D6" unique_id=408166080]
+position = Vector2(416, 543)
+shape = SubResource("RectangleShape2D_sbrn2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Area2D6" unique_id=828731431]
+
+[node name="PanelContainer" type="PanelContainer" parent="Area2D6/CanvasLayer" unique_id=188122609]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Area2D6/CanvasLayer/PanelContainer" unique_id=64631253]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Area2D6/CanvasLayer/PanelContainer/VBoxContainer" unique_id=950555910]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Area2D6/CanvasLayer/PanelContainer/VBoxContainer" unique_id=618806822]
+layout_mode = 2
+
+[node name="BtnTower1" type="Button" parent="Area2D6/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=413078912]
+layout_mode = 2
+
+[node name="BtnTower2" type="Button" parent="Area2D6/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=2109472881]
+layout_mode = 2
+
+[node name="BtnSell" type="Button" parent="Area2D6/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=546267020]
+layout_mode = 2
+
+[node name="TurretSpawn1" type="Marker2D" parent="Area2D6" unique_id=1472521239]
+position = Vector2(416, 543)
+
+[node name="Area2D7" type="Area2D" parent="." unique_id=1570108784]
+script = ExtResource("4_p2k11")
+TURRET_FIRE = ExtResource("6_sbrn2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D7" unique_id=725641694]
+position = Vector2(481, 543)
+texture = ExtResource("6_flbus")
+hframes = 9
+vframes = 9
+frame = 77
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D7" unique_id=849033904]
+position = Vector2(481, 543)
+shape = SubResource("RectangleShape2D_sbrn2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Area2D7" unique_id=248397629]
+
+[node name="PanelContainer" type="PanelContainer" parent="Area2D7/CanvasLayer" unique_id=508541904]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Area2D7/CanvasLayer/PanelContainer" unique_id=782551530]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Area2D7/CanvasLayer/PanelContainer/VBoxContainer" unique_id=962410790]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Area2D7/CanvasLayer/PanelContainer/VBoxContainer" unique_id=1429983726]
+layout_mode = 2
+
+[node name="BtnTower1" type="Button" parent="Area2D7/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=459377870]
+layout_mode = 2
+
+[node name="BtnTower2" type="Button" parent="Area2D7/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=997218266]
+layout_mode = 2
+
+[node name="BtnSell" type="Button" parent="Area2D7/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1438019739]
+layout_mode = 2
+
+[node name="TurretSpawn1" type="Marker2D" parent="Area2D7" unique_id=1780820919]
+position = Vector2(481, 543)
+
+[node name="Area2D8" type="Area2D" parent="." unique_id=1052304809]
+script = ExtResource("4_p2k11")
+TURRET_FIRE = ExtResource("6_sbrn2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D8" unique_id=1041057309]
+position = Vector2(355, 673)
+texture = ExtResource("6_flbus")
+hframes = 9
+vframes = 9
+frame = 77
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D8" unique_id=406955773]
+position = Vector2(356, 673)
+shape = SubResource("RectangleShape2D_sbrn2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Area2D8" unique_id=1107242459]
+
+[node name="PanelContainer" type="PanelContainer" parent="Area2D8/CanvasLayer" unique_id=1550429001]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Area2D8/CanvasLayer/PanelContainer" unique_id=841632473]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Area2D8/CanvasLayer/PanelContainer/VBoxContainer" unique_id=1814201736]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Area2D8/CanvasLayer/PanelContainer/VBoxContainer" unique_id=2121999091]
+layout_mode = 2
+
+[node name="BtnTower1" type="Button" parent="Area2D8/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1117862537]
+layout_mode = 2
+
+[node name="BtnTower2" type="Button" parent="Area2D8/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1814035027]
+layout_mode = 2
+
+[node name="BtnSell" type="Button" parent="Area2D8/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=633183220]
+layout_mode = 2
+
+[node name="TurretSpawn1" type="Marker2D" parent="Area2D8" unique_id=1464034794]
+position = Vector2(356, 673)
+
+[node name="Area2D9" type="Area2D" parent="." unique_id=1990450782]
+script = ExtResource("4_p2k11")
+TURRET_FIRE = ExtResource("6_sbrn2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D9" unique_id=585958194]
+position = Vector2(221, 605)
+texture = ExtResource("6_flbus")
+hframes = 9
+vframes = 9
+frame = 77
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D9" unique_id=1674007570]
+position = Vector2(221, 605)
+shape = SubResource("RectangleShape2D_sbrn2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Area2D9" unique_id=1286810008]
+
+[node name="PanelContainer" type="PanelContainer" parent="Area2D9/CanvasLayer" unique_id=1135094154]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Area2D9/CanvasLayer/PanelContainer" unique_id=1527690078]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Area2D9/CanvasLayer/PanelContainer/VBoxContainer" unique_id=112652983]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Area2D9/CanvasLayer/PanelContainer/VBoxContainer" unique_id=824223929]
+layout_mode = 2
+
+[node name="BtnTower1" type="Button" parent="Area2D9/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=889931368]
+layout_mode = 2
+
+[node name="BtnTower2" type="Button" parent="Area2D9/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=663998368]
+layout_mode = 2
+
+[node name="BtnSell" type="Button" parent="Area2D9/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=44854623]
+layout_mode = 2
+
+[node name="TurretSpawn1" type="Marker2D" parent="Area2D9" unique_id=890497634]
+position = Vector2(221, 605)
+
+[node name="Area2D10" type="Area2D" parent="." unique_id=1349455931]
+script = ExtResource("4_p2k11")
+TURRET_FIRE = ExtResource("6_sbrn2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D10" unique_id=252052025]
+position = Vector2(416, 224)
+texture = ExtResource("6_flbus")
+hframes = 9
+vframes = 9
+frame = 77
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D10" unique_id=1106968970]
+position = Vector2(416, 224)
+shape = SubResource("RectangleShape2D_sbrn2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Area2D10" unique_id=986161831]
+
+[node name="PanelContainer" type="PanelContainer" parent="Area2D10/CanvasLayer" unique_id=843230542]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Area2D10/CanvasLayer/PanelContainer" unique_id=556897393]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Area2D10/CanvasLayer/PanelContainer/VBoxContainer" unique_id=1156803452]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Area2D10/CanvasLayer/PanelContainer/VBoxContainer" unique_id=1754412261]
+layout_mode = 2
+
+[node name="BtnTower1" type="Button" parent="Area2D10/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=478818284]
+layout_mode = 2
+
+[node name="BtnTower2" type="Button" parent="Area2D10/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=536296410]
+layout_mode = 2
+
+[node name="BtnSell" type="Button" parent="Area2D10/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1443222466]
+layout_mode = 2
+
+[node name="TurretSpawn1" type="Marker2D" parent="Area2D10" unique_id=184154895]
+position = Vector2(416, 224)
+
+[node name="Area2D11" type="Area2D" parent="." unique_id=766697818]
+script = ExtResource("4_p2k11")
+TURRET_FIRE = ExtResource("6_sbrn2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D11" unique_id=1661414647]
+position = Vector2(545, 225)
+texture = ExtResource("6_flbus")
+hframes = 9
+vframes = 9
+frame = 77
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D11" unique_id=1342987495]
+position = Vector2(545, 225)
+shape = SubResource("RectangleShape2D_sbrn2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Area2D11" unique_id=357653015]
+
+[node name="PanelContainer" type="PanelContainer" parent="Area2D11/CanvasLayer" unique_id=1868177352]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Area2D11/CanvasLayer/PanelContainer" unique_id=911997962]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Area2D11/CanvasLayer/PanelContainer/VBoxContainer" unique_id=1028717409]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Area2D11/CanvasLayer/PanelContainer/VBoxContainer" unique_id=518239335]
+layout_mode = 2
+
+[node name="BtnTower1" type="Button" parent="Area2D11/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=500675873]
+layout_mode = 2
+
+[node name="BtnTower2" type="Button" parent="Area2D11/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1274224913]
+layout_mode = 2
+
+[node name="BtnSell" type="Button" parent="Area2D11/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=746974602]
+layout_mode = 2
+
+[node name="TurretSpawn1" type="Marker2D" parent="Area2D11" unique_id=932827570]
+position = Vector2(545, 225)
+
+[node name="Area2D12" type="Area2D" parent="." unique_id=703176718]
+script = ExtResource("4_p2k11")
+TURRET_FIRE = ExtResource("6_sbrn2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D12" unique_id=267191043]
+position = Vector2(673, 414)
+texture = ExtResource("6_flbus")
+hframes = 9
+vframes = 9
+frame = 77
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D12" unique_id=1525538822]
+position = Vector2(673, 414)
+shape = SubResource("RectangleShape2D_sbrn2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Area2D12" unique_id=2097893744]
+
+[node name="PanelContainer" type="PanelContainer" parent="Area2D12/CanvasLayer" unique_id=1953386416]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Area2D12/CanvasLayer/PanelContainer" unique_id=586002559]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Area2D12/CanvasLayer/PanelContainer/VBoxContainer" unique_id=931745593]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Area2D12/CanvasLayer/PanelContainer/VBoxContainer" unique_id=646382694]
+layout_mode = 2
+
+[node name="BtnTower1" type="Button" parent="Area2D12/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=641460633]
+layout_mode = 2
+
+[node name="BtnTower2" type="Button" parent="Area2D12/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=826745100]
+layout_mode = 2
+
+[node name="BtnSell" type="Button" parent="Area2D12/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=70307167]
+layout_mode = 2
+
+[node name="TurretSpawn1" type="Marker2D" parent="Area2D12" unique_id=1869415405]
+position = Vector2(673, 414)
+
+[node name="Area2D13" type="Area2D" parent="." unique_id=969993473]
+script = ExtResource("4_p2k11")
+TURRET_FIRE = ExtResource("6_sbrn2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D13" unique_id=753908480]
+position = Vector2(737, 544)
+texture = ExtResource("6_flbus")
+hframes = 9
+vframes = 9
+frame = 77
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D13" unique_id=586266126]
+position = Vector2(737, 544)
+shape = SubResource("RectangleShape2D_sbrn2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Area2D13" unique_id=1663496530]
+
+[node name="PanelContainer" type="PanelContainer" parent="Area2D13/CanvasLayer" unique_id=807446017]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Area2D13/CanvasLayer/PanelContainer" unique_id=1876309362]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Area2D13/CanvasLayer/PanelContainer/VBoxContainer" unique_id=2110577333]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Area2D13/CanvasLayer/PanelContainer/VBoxContainer" unique_id=948022897]
+layout_mode = 2
+
+[node name="BtnTower1" type="Button" parent="Area2D13/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1371608436]
+layout_mode = 2
+
+[node name="BtnTower2" type="Button" parent="Area2D13/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=256046953]
+layout_mode = 2
+
+[node name="BtnSell" type="Button" parent="Area2D13/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=572023170]
+layout_mode = 2
+
+[node name="TurretSpawn1" type="Marker2D" parent="Area2D13" unique_id=1195380384]
+position = Vector2(737, 544)
+
+[node name="Area2D14" type="Area2D" parent="." unique_id=2107384831]
+script = ExtResource("4_p2k11")
+TURRET_FIRE = ExtResource("6_sbrn2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D14" unique_id=652432475]
+position = Vector2(665, 672)
+texture = ExtResource("6_flbus")
+hframes = 9
+vframes = 9
+frame = 77
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D14" unique_id=2004933030]
+position = Vector2(665, 672)
+shape = SubResource("RectangleShape2D_sbrn2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Area2D14" unique_id=859797497]
+
+[node name="PanelContainer" type="PanelContainer" parent="Area2D14/CanvasLayer" unique_id=1311810384]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Area2D14/CanvasLayer/PanelContainer" unique_id=2031039375]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Area2D14/CanvasLayer/PanelContainer/VBoxContainer" unique_id=1805524066]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Area2D14/CanvasLayer/PanelContainer/VBoxContainer" unique_id=185472345]
+layout_mode = 2
+
+[node name="BtnTower1" type="Button" parent="Area2D14/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1855533120]
+layout_mode = 2
+
+[node name="BtnTower2" type="Button" parent="Area2D14/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1248299983]
+layout_mode = 2
+
+[node name="BtnSell" type="Button" parent="Area2D14/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=2115821801]
+layout_mode = 2
+
+[node name="TurretSpawn1" type="Marker2D" parent="Area2D14" unique_id=849341394]
+position = Vector2(665, 672)
+
+[node name="Area2D15" type="Area2D" parent="." unique_id=2051024960]
+script = ExtResource("4_p2k11")
+TURRET_FIRE = ExtResource("6_sbrn2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D15" unique_id=838559]
+position = Vector2(734, 736)
+texture = ExtResource("6_flbus")
+hframes = 9
+vframes = 9
+frame = 77
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D15" unique_id=276997122]
+position = Vector2(734, 736)
+shape = SubResource("RectangleShape2D_sbrn2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Area2D15" unique_id=1082907052]
+
+[node name="PanelContainer" type="PanelContainer" parent="Area2D15/CanvasLayer" unique_id=1872813056]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Area2D15/CanvasLayer/PanelContainer" unique_id=56590459]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Area2D15/CanvasLayer/PanelContainer/VBoxContainer" unique_id=1362238248]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Area2D15/CanvasLayer/PanelContainer/VBoxContainer" unique_id=2034119645]
+layout_mode = 2
+
+[node name="BtnTower1" type="Button" parent="Area2D15/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1755843320]
+layout_mode = 2
+
+[node name="BtnTower2" type="Button" parent="Area2D15/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=410868055]
+layout_mode = 2
+
+[node name="BtnSell" type="Button" parent="Area2D15/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1717305365]
+layout_mode = 2
+
+[node name="TurretSpawn1" type="Marker2D" parent="Area2D15" unique_id=1560850005]
+position = Vector2(734, 736)
+
+[node name="Area2D16" type="Area2D" parent="." unique_id=680085915]
+script = ExtResource("4_p2k11")
+TURRET_FIRE = ExtResource("6_sbrn2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D16" unique_id=1471096135]
+position = Vector2(797, 865)
+texture = ExtResource("6_flbus")
+hframes = 9
+vframes = 9
+frame = 77
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D16" unique_id=1500249457]
+position = Vector2(797, 865)
+shape = SubResource("RectangleShape2D_sbrn2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Area2D16" unique_id=470813223]
+
+[node name="PanelContainer" type="PanelContainer" parent="Area2D16/CanvasLayer" unique_id=189705017]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Area2D16/CanvasLayer/PanelContainer" unique_id=1575749366]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Area2D16/CanvasLayer/PanelContainer/VBoxContainer" unique_id=1280249363]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Area2D16/CanvasLayer/PanelContainer/VBoxContainer" unique_id=1539684360]
+layout_mode = 2
+
+[node name="BtnTower1" type="Button" parent="Area2D16/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=300237241]
+layout_mode = 2
+
+[node name="BtnTower2" type="Button" parent="Area2D16/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1828313826]
+layout_mode = 2
+
+[node name="BtnSell" type="Button" parent="Area2D16/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=122787962]
+layout_mode = 2
+
+[node name="TurretSpawn1" type="Marker2D" parent="Area2D16" unique_id=613823290]
+position = Vector2(797, 865)
+
+[node name="Area2D17" type="Area2D" parent="." unique_id=2040797471]
+script = ExtResource("4_p2k11")
+TURRET_FIRE = ExtResource("6_sbrn2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D17" unique_id=351198688]
+position = Vector2(605, 862)
+texture = ExtResource("6_flbus")
+hframes = 9
+vframes = 9
+frame = 77
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D17" unique_id=1220144609]
+position = Vector2(605, 862)
+shape = SubResource("RectangleShape2D_sbrn2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Area2D17" unique_id=1931642582]
+
+[node name="PanelContainer" type="PanelContainer" parent="Area2D17/CanvasLayer" unique_id=843765223]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Area2D17/CanvasLayer/PanelContainer" unique_id=42732505]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Area2D17/CanvasLayer/PanelContainer/VBoxContainer" unique_id=1423489924]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Area2D17/CanvasLayer/PanelContainer/VBoxContainer" unique_id=1054233177]
+layout_mode = 2
+
+[node name="BtnTower1" type="Button" parent="Area2D17/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1285731713]
+layout_mode = 2
+
+[node name="BtnTower2" type="Button" parent="Area2D17/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1256541177]
+layout_mode = 2
+
+[node name="BtnSell" type="Button" parent="Area2D17/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=315712936]
+layout_mode = 2
+
+[node name="TurretSpawn1" type="Marker2D" parent="Area2D17" unique_id=938020339]
+position = Vector2(605, 862)
+
 [node name="GoldLabel" type="Label" parent="." unique_id=1864503427]
 offset_left = 906.0
 offset_top = 971.0
