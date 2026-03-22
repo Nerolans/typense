@@ -81,5 +81,6 @@ func _process(delta):
 		$Enemy.play("left")
 	if progress_ratio == 1:
 		get_parent().kills+=1
+		get_parent().loseLive()
 		Money.add_gold(8)
 		queue_free()

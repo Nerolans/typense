@@ -44,5 +44,6 @@ func _process(delta):
 		get_parent().kills +=1
 		get_parent().spawnTime = get_parent().tmpTime + 1
 		get_parent().boss = false
+		get_parent().loseLive()
 		Money.add_gold(50)
 		queue_free()

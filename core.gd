@@ -16,4 +16,7 @@ func _process(delta: float) -> void:
 		play("2")
 	elif lives == 1:
 		play("1")
+	elif lives == 0
+		play("0")
+		#GAME OVER HERE
 			

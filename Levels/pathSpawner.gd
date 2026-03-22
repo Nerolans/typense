@@ -61,3 +61,6 @@ func _input(event):
 			var oldest = childs[0]
 			if event.as_text() == oldest.getlastChr():
 				oldest.loseLive()
+				
+func loseLive():
+	$Core.lives-=1
