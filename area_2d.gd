@@ -3,7 +3,7 @@ extends Area2D
 enum TowerType { NONE, FIRE, ANTILETTER }
 var current_tower: TowerType = TowerType.NONE
 var current_level: int = 0
-
+var turret_node = null
 const COSTS = {
 	"fire": [100, 150, 200],
 	"antiletter": [120, 180, 250]
@@ -16,6 +16,9 @@ const SELL_RATIO = 0.5
 @onready var btn_tower2 = $"CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer/BtnTower2"
 @onready var btn_sell = $"CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer/BtnSell"
 @onready var gold_label = $"CanvasLayer/GoldLabel"
+@export var TURRET_FIRE: PackedScene = null  
+@onready var spawn_points = [$TurretSpawn1]    
+
 
 
 func _ready():
@@ -79,10 +82,18 @@ func _on_btn_tower1():
 		if current_tower == TowerType.NONE:
 			current_tower = TowerType.FIRE
 			current_level = 1
+			var turret = TURRET_FIRE.instantiate()
+			get_tree().current_scene.add_child(turret)
+			turret.position =  $TurretSpawn1.global_position
+			turret_node = turret
+			print("area position: ", global_position)
+			print("turret position: ", turret.global_position)
 		elif current_tower == TowerType.FIRE:
 			current_level += 1
-		print("You bought Tower : [Fire] lvl : ", current_level, "\nFor : ", COSTS["fire"][current_level - 1], " golds.")
-		_update_menu()
+			if turret_node != null:
+				turret_node.level_up(current_level)
+				print("You bought Tower : [Fire] lvl : ", current_level, "\nFor : ", COSTS["fire"][current_level - 1], " golds.")
+				_update_menu()
 	else:
 		print("Your balance is : ", Money.gold, " but you need : ", COSTS["fire"][current_level])
 
@@ -93,8 +104,10 @@ func _on_btn_tower2():
 			current_level = 1
 		elif current_tower == TowerType.ANTILETTER:
 			current_level += 1
-		print("You bought Tower : [Anti Letter] lvl : ", current_level, "\nFor : ", COSTS["antiletter"][current_level - 1], " golds.")
-		_update_menu()
+			if turret_node != null:
+				turret_node.level_up(current_level)
+				print("You bought Tower : [Anti Letter] lvl : ", current_level, "\nFor : ", COSTS["antiletter"][current_level - 1], " golds.")
+				_update_menu()
 	else:
 		print("Your balance is : ", Money.gold, " but you need : ", COSTS["antiletter"][current_level])
 
@@ -107,4 +120,6 @@ func _on_btn_sell():
 		print("Sold for : ", COSTS["antiletter"][current_level - 1] * SELL_RATIO)
 	current_tower = TowerType.NONE
 	current_level = 0
-	menu.visible = false
+	if turret_node != null:
+		turret_node.sell(current_level)
+		menu.visible = false

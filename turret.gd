@@ -1,18 +1,20 @@
 extends Node2D
 
 @export var BULLET: PackedScene = null
-
-var target: Node2D = null
-
+@onready var screensize  = get_viewport_rect().size
 @onready var gunSprite = $GunSprite
 @onready var rayCast = $RayCast2D
 @onready var reloadTimer = $RayCast2D/ReloadTimer
+var level = 1
+var target: Node2D = null
 
 
+
+	
 func _ready():
 	await get_tree().process_frame
 	target = find_target()
-
+	gunSprite.play("level1")  
 func _physics_process(_delta):
 	target = find_target()  
 	
@@ -58,3 +60,18 @@ func find_target():
 	
 func _on_reload_timer_timeout():
 	rayCast.enabled = true
+
+func level_up(new_level: int):
+	if new_level == 1:
+		reloadTimer.wait_time = 2.5
+		gunSprite.play("level1")
+	if new_level == 2:
+		reloadTimer.wait_time = 1.0
+		gunSprite.play("level2")
+	elif new_level == 3:
+		reloadTimer.wait_time = 0.3
+		gunSprite.play("level3")
+func sell(new_level: int):
+	queue_free()
+		
+		

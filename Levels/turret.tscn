@@ -1,12 +1,25 @@
 [gd_scene format=3 uid="uid://ddal1c1w7x4f2"]
 
 [ext_resource type="Script" uid="uid://caixpsw5vewgf" path="res://turret.gd" id="1_dgd6u"]
-[ext_resource type="PackedScene" path="res://Levels/bullet.tscn" id="2_eqv6u"]
-[ext_resource type="Texture2D" uid="uid://bnsbfr61u3c38" path="res://spriteSheet.png" id="3_ehpjk"]
+[ext_resource type="PackedScene" uid="uid://dj8ieoe2fmwgj" path="res://Levels/bullet.tscn" id="2_eqv6u"]
+[ext_resource type="Texture2D" uid="uid://fc4w8y8voijj" path="res://spriteSheet78.png" id="3_oo162"]
+[ext_resource type="Script" uid="uid://dyp0j31a8tmge" path="res://Levels/gun_sprite.gd" id="5_gorcm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oo162"]
-atlas = ExtResource("3_ehpjk")
-region = Rect2(0, 256, 64, 64)
+atlas = ExtResource("3_oo162")
+region = Rect2(384, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gorcm"]
+atlas = ExtResource("3_oo162")
+region = Rect2(192, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jy7ju"]
+atlas = ExtResource("3_oo162")
+region = Rect2(64, 448, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26e0k"]
+atlas = ExtResource("3_oo162")
+region = Rect2(384, 512, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gorcm"]
 animations = [{
@@ -15,7 +28,31 @@ animations = [{
 "texture": SubResource("AtlasTexture_oo162")
 }],
 "loop": true,
-"name": &"default",
+"name": &"level1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gorcm")
+}],
+"loop": true,
+"name": &"level2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jy7ju")
+}],
+"loop": true,
+"name": &"level3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26e0k")
+}],
+"loop": true,
+"name": &"sold",
 "speed": 5.0
 }]
 
@@ -27,6 +64,8 @@ BULLET = ExtResource("2_eqv6u")
 
 [node name="GunSprite" type="AnimatedSprite2D" parent="." unique_id=823556208]
 sprite_frames = SubResource("SpriteFrames_gorcm")
+animation = &"sold"
+script = ExtResource("5_gorcm")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=2143438653]
 target_position = Vector2(0, 53)
@@ -35,7 +74,7 @@ collide_with_areas = true
 collide_with_bodies = false
 
 [node name="ReloadTimer" type="Timer" parent="RayCast2D" unique_id=48100946]
-wait_time = 0.04
+wait_time = 2.5
 one_shot = true
 
 [connection signal="timeout" from="RayCast2D/ReloadTimer" to="." method="_on_reload_timer_timeout"]

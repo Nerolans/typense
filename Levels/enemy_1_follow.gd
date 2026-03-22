@@ -22,6 +22,7 @@ func loseLive():
 
 	if label.lives < 0:
 		get_parent().kills+=1
+		Money.add_gold(5)
 		queue_free()
 
 func getlastChr()->String:
@@ -39,22 +40,22 @@ func _process(delta):
 	if progressConc == 0:
 		$Enemy.stop()
 		$Enemy.play("down")
-	elif progressConc == 134:
+	elif progressConc >= 130 && progressConc <= 140  :
 		$Enemy.stop()
 		$Enemy.play("left")
-	elif progressConc == 382:
+	elif progressConc >= 382 && progressConc <= 392:
 		$Enemy.stop()
 		$Enemy.play("down")
-	elif progressConc == 509:
+	elif progressConc >= 509 && progressConc <= 520  :
 		$Enemy.stop()
 		$Enemy.play("right")
-	elif progressConc == 636:
+	elif progressConc >= 636 && progressConc <= 646:
 		$Enemy.stop()
 		$Enemy.play("down")
-	elif progressConc == 836:
+	elif progressConc >= 836 && progressConc <= 846:
 		$Enemy.stop()
 		$Enemy.play("left")
-	elif progressConc == 1029:
+	elif progressConc >= 1029 && progressConc <= 1039:
 		$Enemy.stop()
 		$Enemy.play("down")
 	elif progressConc == 1152:

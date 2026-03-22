@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://bxi780aye81oc"]
+
+[ext_resource type="Script" uid="uid://wvspadqttau4" path="res://area_2d.gd" id="1_clqkr"]
+[ext_resource type="PackedScene" uid="uid://ddal1c1w7x4f2" path="res://Levels/turret.tscn" id="2_dcakf"]
+[ext_resource type="Texture2D" uid="uid://fc4w8y8voijj" path="res://spriteSheet78.png" id="3_jp6lh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sbrn2"]
+size = Vector2(64, 64)
+
+[node name="Area2D" type="Area2D" unique_id=1929193940]
+script = ExtResource("1_clqkr")
+TURRET_FIRE = ExtResource("2_dcakf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=348542005]
+position = Vector2(352, 352)
+texture = ExtResource("3_jp6lh")
+hframes = 9
+vframes = 9
+frame = 77
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=398801036]
+position = Vector2(352, 352)
+shape = SubResource("RectangleShape2D_sbrn2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1250250902]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer" unique_id=494248081]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer" unique_id=158995833]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=27563187]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=1434384602]
+layout_mode = 2
+
+[node name="BtnTower1" type="Button" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=162254489]
+layout_mode = 2
+
+[node name="BtnTower2" type="Button" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=767390685]
+layout_mode = 2
+
+[node name="BtnSell" type="Button" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=824540299]
+layout_mode = 2
+
+[node name="GoldLabel" type="Label" parent="CanvasLayer" unique_id=1386158834]
+offset_left = 947.0
+offset_top = 996.0
+offset_right = 987.0
+offset_bottom = 1019.0
+
+[node name="TurretSpawn1" type="Marker2D" parent="." unique_id=627401169]
+position = Vector2(352, 352)
