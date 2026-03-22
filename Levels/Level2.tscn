@@ -25,9 +25,9 @@ curve = SubResource("Curve2D_w0h0a")
 script = ExtResource("2_jglcl")
 
 [node name="enemy2follow" parent="Path2D2" unique_id=2127768769 instance=ExtResource("4_vd23k")]
-position = Vector2(22, 351)
+position = Vector2(351.05667, 730.29285)
 rotation = 1.5707964
-script = null
+progress = 1721.1
 
 [node name="GoldLabel" type="Label" parent="." unique_id=1864503427]
 offset_left = 870.0
