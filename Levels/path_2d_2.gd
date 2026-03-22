@@ -23,32 +23,14 @@ func _process(delta):
 		add_child(newFollower)
 		timer = 0
 	
-	if kills == 40 && boss == false:
+	if kills % 20 == 0 && boss == false:
 		tmpTime = spawnTime
 		boss = true
 		spawnTime = 30
 		var boss:PackedScene = preload("res://Levels/Assets/bossFollow.tscn")
 		var newBoss = boss.instantiate()
 		add_child(newBoss)
-		newBoss.runSpeed = 230
-		
-	if kills == 50 && boss == false:
-		tmpTime = spawnTime
-		boss = true
-		spawnTime = 30
-		var boss:PackedScene = preload("res://Levels/Assets/bossFollow.tscn")
-		var newBoss = boss.instantiate()
-		add_child(newBoss)
-		newBoss.runSpeed = 260
-		
-	if kills == 25 && boss == false:
-		tmpTime = spawnTime
-		boss = true
-		spawnTime = 30
-		var boss:PackedScene = preload("res://Levels/Assets/bossFollow.tscn")
-		var newBoss = boss.instantiate()
-		add_child(newBoss)
-		newBoss.runSpeed = 130
+		newBoss.runSpeed = 100 + (kills * (randi() % 2+1)) +40
 		
 func sort_childrens(a, b):
 	return a.progress > b.progress
