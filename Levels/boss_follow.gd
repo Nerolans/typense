@@ -23,8 +23,9 @@ func loseLive():
 
 	if label.lives < 0:
 		get_parent().kills +=1
-		get_parent().spawnTime = 0.1
+		get_parent().spawnTime = get_parent().tmpTime + 1
 		get_parent().boss = false
+		Money.add_gold(50)
 		queue_free()
 
 func getlastChr()->String:
@@ -40,4 +41,8 @@ func _process(delta):
 	var progressConc = snapped(progress,1)
 	
 	if progress_ratio == 1:
+		get_parent().kills +=1
+		get_parent().spawnTime = get_parent().tmpTime + 1
+		get_parent().boss = false
+		Money.add_gold(50)
 		queue_free()

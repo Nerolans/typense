@@ -22,7 +22,7 @@ func loseLive():
 
 	if label.lives < 0:
 		get_parent().kills+=1
-		Money.add_gold(5)
+		Money.add_gold(8)
 		queue_free()
 
 func getlastChr()->String:
@@ -80,4 +80,6 @@ func _process(delta):
 		$Enemy.stop()
 		$Enemy.play("left")
 	if progress_ratio == 1:
+		get_parent().kills+=1
+		Money.add_gold(8)
 		queue_free()
