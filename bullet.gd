@@ -3,10 +3,8 @@ extends Area2D
 const RIGHT = Vector2.RIGHT
 var SPEED: int = 500
 var bullet_type = ""
-@onready var sprite = $AnimatedSprite2D
 
-func _ready():
-	sprite.play("default")
+
 
 func _process(delta):
 	var movement = RIGHT.rotated(rotation) * SPEED * delta
@@ -28,4 +26,9 @@ func _on_area_entered(area):
 		
 func set_bulletType(newtype:String):
 	bullet_type = newtype
+	var sprite = get_node("AnimatedSprite2D")
+	if bullet_type == "Antiletter":
+		sprite.play("antiletterbullet")
+	if bullet_type == "Slower":
+		sprite.play("slowerbullet")
 	

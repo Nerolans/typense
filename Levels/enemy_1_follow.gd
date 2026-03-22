@@ -47,7 +47,6 @@ func _process(delta):
 	if slowed ==true:
 		timer += delta
 		if timer > 5:
-			print(timer)
 			runSpeed = oldspeed
 			timer = 0  
 	progress = (progress + runSpeed * delta)

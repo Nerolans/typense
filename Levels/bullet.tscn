@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ckmpx7u3tl35s"]
 
 [ext_resource type="Script" uid="uid://dcp2qt3vdkl52" path="res://bullet.gd" id="1_ix6xb"]
+[ext_resource type="Texture2D" uid="uid://fc4w8y8voijj" path="res://spriteSheet78.png" id="3_3cqgw"]
 [ext_resource type="Texture2D" uid="uid://cnuvxsyrwqs8v" path="res://New Piskel (2).png" id="3_c8wh5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ix6xb"]
@@ -15,6 +16,18 @@ region = Rect2(64, 0, 64, 64)
 atlas = ExtResource("3_c8wh5")
 region = Rect2(0, 64, 64, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_y7oeu"]
+atlas = ExtResource("3_3cqgw")
+region = Rect2(128, 448, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88kaj"]
+atlas = ExtResource("3_3cqgw")
+region = Rect2(192, 448, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i704x"]
+atlas = ExtResource("3_3cqgw")
+region = Rect2(256, 448, 64, 64)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_y7oeu"]
 animations = [{
 "frames": [{
@@ -28,12 +41,26 @@ animations = [{
 "texture": SubResource("AtlasTexture_3cqgw")
 }],
 "loop": true,
-"name": &"default",
+"name": &"antiletterbullet",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y7oeu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88kaj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i704x")
+}],
+"loop": true,
+"name": &"slowerbullet",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_88kaj"]
-size = Vector2(32, 36)
+size = Vector2(41, 50.5)
 
 [node name="Bullet" type="Area2D" unique_id=1448121537]
 position = Vector2(0, 2)
@@ -44,9 +71,10 @@ script = ExtResource("1_ix6xb")
 position = Vector2(1.0000029, 9.536743e-07)
 scale = Vector2(2.2734375, 2.2265625)
 sprite_frames = SubResource("SpriteFrames_y7oeu")
+animation = &"antiletterbullet"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1556560868]
-position = Vector2(1, 0)
+position = Vector2(0.5, -4.75)
 shape = SubResource("RectangleShape2D_88kaj")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1741264878]
