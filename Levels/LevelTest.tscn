@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bnq8bk3qbs4my" path="res://core.tscn" id="8_d2xh1"]
 [ext_resource type="Script" uid="uid://cdwiqjoxi155f" path="res://core.gd" id="9_cc3a2"]
 [ext_resource type="PackedScene" path="res://goldAnimated.tscn" id="10_fdrc5"]
-[ext_resource type="Texture2D" uid="uid://dkcmm8smvkt6a" path="res://coinSpriteSheet.png" id="11_6o64c"]
+[ext_resource type="Texture2D" uid="uid://vbud0i3tr8o2" path="res://coinSpriteSheet.png" id="11_6o64c"]
 
 [sub_resource type="Curve2D" id="Curve2D_sbrn2"]
 _data = {

@@ -1,23 +1,13 @@
-<<<<<<< Updated upstream
 [gd_scene format=3 uid="uid://cepurusfmk1ru"]
 
 [ext_resource type="Script" uid="uid://gjbylf51qq44" path="res://Levels/enemy_follow_2.gd" id="1_6hr5n"]
-=======
-[gd_scene format=3 uid="uid://bmgymndufb4ee"]
-
-[ext_resource type="Script" uid="uid://jwgkvx1l1oc1" path="res://Levels/Assets/enemy_2_follow.gd" id="1_6hr5n"]
->>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://b2kje8lx8udrp" path="res://enemy.tscn" id="2_o7mb6"]
 [ext_resource type="Script" uid="uid://y5p3yb0g0io2" path="res://Levels/Assets/rich_text_label.gd" id="3_h1xfl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yb1oy"]
 size = Vector2(55.5, 51)
 
-<<<<<<< Updated upstream
 [node name="enemy2follow" type="PathFollow2D" unique_id=2127768769 groups=["enemies"]]
-=======
-[node name="enemy2follow" type="PathFollow2D" unique_id=2127768769]
->>>>>>> Stashed changes
 rotation = 1.5783719
 rotates = false
 loop = false
