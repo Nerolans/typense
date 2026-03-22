@@ -131,6 +131,7 @@ func _on_btn_tower2():
 			turret.position =  $TurretSpawn1.global_position
 			turret.setType(current_tower)
 			turret_node = turret
+			_update_menu()
 			print("area position: ", global_position)
 			print("turret position: ", turret.global_position)
 		elif current_tower == TowerType.ANTILETTER:
