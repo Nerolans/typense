@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dst7yer5o0po5"]
+
+[ext_resource type="Script" uid="uid://cxlbf8jktwbkt" path="res://Levels/boss_follow.gd" id="1_5t6dh"]
+[ext_resource type="PackedScene" uid="uid://b5p0nn4ihro3j" path="res://boss.tscn" id="1_2316b"]
+[ext_resource type="Script" uid="uid://w4lbjrngujev" path="res://Levels/boss_rich_text_label.gd" id="3_r6ccb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5t6dh"]
+size = Vector2(40, 34)
+
+[node name="BossFollow" type="PathFollow2D" unique_id=1692811789]
+rotates = false
+loop = false
+script = ExtResource("1_5t6dh")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1474218423]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=140425706]
+shape = SubResource("RectangleShape2D_5t6dh")
+
+[node name="Boss" parent="." unique_id=1296489968 instance=ExtResource("1_2316b")]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=988525343]
+offset_left = -126.0
+offset_top = 11.0
+offset_right = 126.0
+offset_bottom = 51.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "TEST"
+horizontal_alignment = 1
+script = ExtResource("3_r6ccb")

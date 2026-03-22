@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cq3k3yq2rqcax"]
 
-[ext_resource type="Texture2D" uid="uid://dcx4g2pfea0sj" path="res://map.png" id="1_7b0me"]
+[ext_resource type="Texture2D" uid="uid://ciqxajnoks7r4" path="res://level1.png" id="1_sbrn2"]
 [ext_resource type="Script" uid="uid://s726oisoln5h" path="res://Levels/pathSpawner.gd" id="2_7b0me"]
 [ext_resource type="PackedScene" uid="uid://b65s4her4y3wh" path="res://Levels/enemyFollow.tscn" id="3_p2k11"]
 [ext_resource type="Script" uid="uid://wvspadqttau4" path="res://Levels/area_2d.gd" id="4_p2k11"]
 [ext_resource type="Texture2D" uid="uid://bnsbfr61u3c38" path="res://spriteSheet.png" id="5_pew5n"]
-[ext_resource type="PackedScene" path="res://Levels/turret.tscn" id="6_sbrn2"]
+[ext_resource type="PackedScene" uid="uid://ddal1c1w7x4f2" path="res://Levels/turret.tscn" id="6_sbrn2"]
 
 [sub_resource type="Curve2D" id="Curve2D_sbrn2"]
 _data = {
@@ -20,7 +20,7 @@ size = Vector2(64, 64)
 
 [node name="background" type="Sprite2D" parent="." unique_id=1347524578]
 position = Vector2(512, 512)
-texture = ExtResource("1_7b0me")
+texture = ExtResource("1_sbrn2")
 
 [node name="Path2D" type="Path2D" parent="." unique_id=592466089]
 curve = SubResource("Curve2D_sbrn2")

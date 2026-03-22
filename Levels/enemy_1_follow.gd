@@ -21,6 +21,7 @@ func loseLive():
 	label.parse_bbcode(newWord)
 
 	if label.lives < 0:
+		get_parent().kills+=1
 		queue_free()
 
 func getlastChr()->String:
