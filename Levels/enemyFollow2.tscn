@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cepurusfmk1ru"]
 
-[ext_resource type="Script" path="res://Levels/Assets/enemy_2_follow.gd" id="1_6hr5n"]
+[ext_resource type="Script" uid="uid://gjbylf51qq44" path="res://Levels/enemy_follow_2.gd" id="1_6hr5n"]
 [ext_resource type="PackedScene" uid="uid://b2kje8lx8udrp" path="res://enemy.tscn" id="2_o7mb6"]
 [ext_resource type="Script" uid="uid://y5p3yb0g0io2" path="res://Levels/Assets/rich_text_label.gd" id="3_h1xfl"]
 
