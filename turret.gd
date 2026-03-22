@@ -41,6 +41,20 @@ func shoot():
 	
 	
 	if BULLET:
+		if type_string == "Slower":
+			if level == 1:
+				gunSprite.play("slow1_animation")
+			if level == 2:
+				gunSprite.play("slow2_animation")
+			if level == 3:
+				gunSprite.play("slow3_animation")
+		if type_string == "Antiletter":
+			if level == 1:
+				gunSprite.play("antiletter1_animation")
+			if level == 2:
+				gunSprite.play("antiletter2_animation")
+			if level == 3:
+				gunSprite.play("antiletter3_animation")
 		var bullet: Node2D = BULLET.instantiate()
 		bullet.global_rotation = rayCast.global_rotation
 		bullet.set_bulletType(type_string)
@@ -76,7 +90,7 @@ func level_up(new_level: int):
 		if new_level == 2:
 			reloadTimer.wait_time = 1.0
 			gunSprite.play("slow2")
-		elif new_level == 3:
+		if new_level == 3:
 			reloadTimer.wait_time = 0.3
 			gunSprite.play("slow3")
 	if type_string == "Antiletter":
@@ -89,6 +103,7 @@ func level_up(new_level: int):
 		if new_level == 3:
 			reloadTimer.wait_time = 0.3
 			gunSprite.play("antiletter3")
+	level = new_level
 func sell(new_level: int):
 	queue_free()
 func setType(newturret_type : TowerType):
