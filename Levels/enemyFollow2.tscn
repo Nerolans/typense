@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yb1oy"]
 size = Vector2(55.5, 51)
 
-[node name="enemy2follow" type="PathFollow2D" unique_id=2127768769]
+[node name="enemy2follow" type="PathFollow2D" unique_id=2127768769 groups=["enemies"]]
 rotation = 1.5783719
 rotates = false
 loop = false

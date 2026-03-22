@@ -37,6 +37,7 @@ func _physics_process(_delta):
 					
 
 func shoot():
+	print("pew")
 	
 	
 	if BULLET:
