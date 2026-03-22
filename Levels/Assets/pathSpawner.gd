@@ -61,6 +61,8 @@ func _input(event):
 			var oldest = childs[0]
 			if event.as_text() == oldest.getlastChr():
 				oldest.loseLive()
+			else:
+				oldest.runSpeed = oldest.runSpeed * 1.2
 				
 func loseLive():
 	get_parent().loseLive()
