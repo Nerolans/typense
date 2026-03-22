@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://x2om5njbxf4w"]
+
+[ext_resource type="Script" uid="uid://hdvpucm8tquc" path="res://Levels/Assets/level_test.gd" id="1_vd23k"]
+[ext_resource type="Script" path="res://Levels/path_2d_2.gd" id="2_jglcl"]
+[ext_resource type="Texture2D" path="res://level2.png" id="2_vd23k"]
+[ext_resource type="PackedScene" path="res://Levels/enemyFollow2.tscn" id="4_vd23k"]
+[ext_resource type="PackedScene" uid="uid://bnq8bk3qbs4my" path="res://core.tscn" id="8_mbwna"]
+[ext_resource type="Script" uid="uid://cdwiqjoxi155f" path="res://core.gd" id="9_v023s"]
+
+[sub_resource type="Curve2D" id="Curve2D_w0h0a"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 22, 351, 0, 0, 0, 0, 219, 352, 0, 0, 0, 0, 223, 475, 0, 0, 0, 0, 475, 473, 0, 0, 0, 0, 476, 408, 0, 0, 0, 0, 669, 411, 0, 0, 0, 0, 673, 603, 0, 0, 0, 0, 735, 602, 0, 0, 0, 0, 735, 794, 0, 0, 0, 0, 547, 798, 0, 0, 0, 0, 544, 734, 0, 0, 0, 0, 350, 730, 0, 0, 0, 0, 352, 615)
+}
+point_count = 13
+
+[node name="Level2" type="Node2D" unique_id=1823012563]
+script = ExtResource("1_vd23k")
+
+[node name="background_2" type="Sprite2D" parent="." unique_id=733659810]
+position = Vector2(512, 512)
+texture = ExtResource("2_vd23k")
+
+[node name="Path2D2" type="Path2D" parent="." unique_id=1682369052]
+curve = SubResource("Curve2D_w0h0a")
+script = ExtResource("2_jglcl")
+
+[node name="enemy2follow" parent="Path2D2" unique_id=2127768769 instance=ExtResource("4_vd23k")]
+position = Vector2(22, 351)
+rotation = 1.5707964
+
+[node name="GoldLabel" type="Label" parent="." unique_id=1864503427]
+offset_left = 870.0
+offset_top = 965.0
+offset_right = 910.0
+offset_bottom = 1007.0
+theme_override_colors/font_color = Color(18.892002, 18.892002, 18.892002, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 1
+theme_override_font_sizes/font_size = 30
+
+[node name="Core" parent="." unique_id=1307836770 instance=ExtResource("8_mbwna")]
+position = Vector2(351, 603)
+scale = Vector2(1.4453127, 1.5078127)
+script = ExtResource("9_v023s")
