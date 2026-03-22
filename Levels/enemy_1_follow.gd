@@ -22,7 +22,7 @@ func loseLive():
 
 	if label.lives < 0:
 		get_parent().kills+=1
-		Money.add_gold(5)
+		Money.add_gold(25)
 		queue_free()
 
 func getlastChr()->String:

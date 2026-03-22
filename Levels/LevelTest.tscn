@@ -909,3 +909,4 @@ script = ExtResource("9_cc3a2")
 [node name="GoldAnimated" parent="." unique_id=1921761808 instance=ExtResource("10_fdrc5")]
 position = Vector2(850, 988)
 sprite_frames = SubResource("SpriteFrames_irhp3")
+autoplay = "default"

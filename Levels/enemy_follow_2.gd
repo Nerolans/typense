@@ -22,7 +22,7 @@ func loseLive():
 
 	if label.lives < 0:
 		get_parent().kills+=1
-		Money.add_gold(8)
+		Money.add_gold(20)
 		queue_free()
 
 func getlastChr()->String:
@@ -95,5 +95,5 @@ func _process(delta):
 	if progress_ratio == 1:
 		get_parent().kills+=1
 		get_parent().loseLive()
-		Money.add_gold(8)
+		Money.add_gold(25)
 		queue_free()

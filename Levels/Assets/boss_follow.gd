@@ -26,7 +26,7 @@ func loseLive():
 		get_parent().kills +=1
 		get_parent().spawnTime = get_parent().tmpTime + 1
 		get_parent().boss = false
-		Money.add_gold(50)
+		Money.add_gold(25)
 		queue_free()
 
 func getlastChr()->String:
@@ -58,5 +58,5 @@ func _process(delta):
 		get_parent().spawnTime = get_parent().tmpTime + 1
 		get_parent().boss = false
 		get_parent().loseLive()
-		Money.add_gold(50)
+		Money.add_gold(25)
 		queue_free()

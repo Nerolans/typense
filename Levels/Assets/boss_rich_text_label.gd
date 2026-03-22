@@ -5,7 +5,7 @@ var lives = 0
 
 func _ready() -> void:
 	print("test")
-	var length = 20
+	var length = 50
 	text = ""
 	const chars ="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 	for i in range(length):

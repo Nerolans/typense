@@ -105,7 +105,7 @@ curve = SubResource("Curve2D_w0h0a")
 script = ExtResource("2_jglcl")
 
 [node name="enemy2follow" parent="Path2D2" unique_id=2127768769 instance=ExtResource("4_vd23k")]
-position = Vector2(24, 343)
+position = Vector2(351.05667, 730.29285)
 rotation = 1.5707964
 progress = 1721.1
 
@@ -128,6 +128,7 @@ script = ExtResource("9_v023s")
 [node name="GoldAnimated" parent="." unique_id=1921761808 instance=ExtResource("9_x7rwe")]
 position = Vector2(850, 988)
 sprite_frames = SubResource("SpriteFrames_80cou")
+autoplay = "default"
 
 [node name="Area2D2" type="Area2D" parent="." unique_id=199897534]
 script = ExtResource("9_lf2mf")
