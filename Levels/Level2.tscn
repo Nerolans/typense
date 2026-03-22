@@ -4,14 +4,92 @@
 [ext_resource type="Script" uid="uid://dajji2pu0ipq2" path="res://Levels/path_2d_2.gd" id="2_jglcl"]
 [ext_resource type="Texture2D" uid="uid://x8vbdofsyh57" path="res://level2.png" id="2_vd23k"]
 [ext_resource type="PackedScene" uid="uid://cepurusfmk1ru" path="res://Levels/enemyFollow2.tscn" id="4_vd23k"]
+[ext_resource type="Script" uid="uid://wvspadqttau4" path="res://area_2d.gd" id="7_m3ha0"]
 [ext_resource type="PackedScene" uid="uid://bnq8bk3qbs4my" path="res://core.tscn" id="8_mbwna"]
+[ext_resource type="Texture2D" uid="uid://fc4w8y8voijj" path="res://spriteSheet78.png" id="8_vd23k"]
 [ext_resource type="Script" uid="uid://cdwiqjoxi155f" path="res://core.gd" id="9_v023s"]
+[ext_resource type="PackedScene" path="res://goldAnimated.tscn" id="9_x7rwe"]
+[ext_resource type="Texture2D" uid="uid://dkcmm8smvkt6a" path="res://coinSpriteSheet.png" id="10_lf2mf"]
 
 [sub_resource type="Curve2D" id="Curve2D_w0h0a"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 22, 351, 0, 0, 0, 0, 219, 352, 0, 0, 0, 0, 223, 475, 0, 0, 0, 0, 475, 473, 0, 0, 0, 0, 476, 408, 0, 0, 0, 0, 669, 411, 0, 0, 0, 0, 673, 603, 0, 0, 0, 0, 735, 602, 0, 0, 0, 0, 735, 794, 0, 0, 0, 0, 547, 798, 0, 0, 0, 0, 544, 734, 0, 0, 0, 0, 350, 730, 0, 0, 0, 0, 352, 615)
 }
 point_count = 13
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7rwe"]
+size = Vector2(64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6px6"]
+atlas = ExtResource("10_lf2mf")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hj555"]
+atlas = ExtResource("10_lf2mf")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fnor"]
+atlas = ExtResource("10_lf2mf")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q52cx"]
+atlas = ExtResource("10_lf2mf")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u38hn"]
+atlas = ExtResource("10_lf2mf")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byksx"]
+atlas = ExtResource("10_lf2mf")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3eqx"]
+atlas = ExtResource("10_lf2mf")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dp0dy"]
+atlas = ExtResource("10_lf2mf")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhp4s"]
+atlas = ExtResource("10_lf2mf")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_80cou"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j6px6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hj555")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8fnor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q52cx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u38hn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_byksx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3eqx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dp0dy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhp4s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Level2" type="Node2D" unique_id=1823012563]
 script = ExtResource("1_vd23k")
@@ -44,3 +122,53 @@ theme_override_font_sizes/font_size = 30
 position = Vector2(351, 603)
 scale = Vector2(1.4453127, 1.5078127)
 script = ExtResource("9_v023s")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2112585865]
+script = ExtResource("7_m3ha0")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1447895015]
+position = Vector2(352, 352)
+texture = ExtResource("8_vd23k")
+hframes = 9
+vframes = 9
+frame = 77
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=397816877]
+position = Vector2(352, 352)
+shape = SubResource("RectangleShape2D_x7rwe")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Area2D" unique_id=1488171080]
+
+[node name="PanelContainer" type="PanelContainer" parent="Area2D/CanvasLayer" unique_id=1207427368]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Area2D/CanvasLayer/PanelContainer" unique_id=1774542835]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Area2D/CanvasLayer/PanelContainer/VBoxContainer" unique_id=2053120102]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Area2D/CanvasLayer/PanelContainer/VBoxContainer" unique_id=1815046348]
+layout_mode = 2
+
+[node name="BtnTower1" type="Button" parent="Area2D/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1168842852]
+layout_mode = 2
+
+[node name="BtnTower2" type="Button" parent="Area2D/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=411167571]
+layout_mode = 2
+
+[node name="BtnSell" type="Button" parent="Area2D/CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=2071012204]
+layout_mode = 2
+
+[node name="TurretSpawn1" type="Marker2D" parent="Area2D" unique_id=14883367]
+position = Vector2(352, 352)
+
+[node name="GoldAnimated" parent="." unique_id=1921761808 instance=ExtResource("9_x7rwe")]
+position = Vector2(850, 988)
+sprite_frames = SubResource("SpriteFrames_80cou")
