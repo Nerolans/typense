@@ -24,8 +24,8 @@ Money="*uid://bmjn0mj4uqp20"
 window/size/viewport_width=1024
 window/size/viewport_height=1024
 window/size/maximize_disabled=true
-window/size/window_width_override=2048
-window/size/window_height_override=2048
+window/size/window_width_override=1500
+window/size/window_height_override=1500
 window/stretch/mode="canvas_items"
 
 [physics]

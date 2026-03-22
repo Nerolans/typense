@@ -15,7 +15,7 @@ const SELL_RATIO = 0.5
 @onready var btn_tower1 = $"CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer/BtnTower1"
 @onready var btn_tower2 = $"CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer/BtnTower2"
 @onready var btn_sell = $"CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer/BtnSell"
-@onready var gold_label = $"CanvasLayer/GoldLabel"
+@onready var gold_label = $"/root/LevelTest/GoldLabel"
 @export var TURRET_FIRE: PackedScene = null  
 @onready var spawn_points = [$TurretSpawn1]    
 
@@ -30,9 +30,14 @@ func _ready():
 	btn_sell.pressed.connect(_on_btn_sell)
 	gold_label.text = "Or : %d" % Money.gold
 	Money.gold_changed.connect(_on_gold_changed)
+	Money.menu_opened.connect(_on_any_menu_opened)
 	
 func _on_gold_changed(new_amount):
 	gold_label.text = "Or : %d" % new_amount
+
+func _on_any_menu_opened(source):
+	if source != self :
+		_close_menu()
 
 func _on_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
@@ -40,8 +45,12 @@ func _on_input_event(_viewport, event, _shape_idx):
 			_open_menu()
 
 func _open_menu():
+	Money.menu_opened.emit(self)
 	menu.visible = true
 	_update_menu()
+
+func _close_menu():
+	menu.visible = false
 
 func _update_menu():
 	match current_tower:
@@ -86,6 +95,7 @@ func _on_btn_tower1():
 			get_tree().current_scene.add_child(turret)
 			turret.position =  $TurretSpawn1.global_position
 			turret_node = turret
+			_update_menu()
 			print("area position: ", global_position)
 			print("turret position: ", turret.global_position)
 		elif current_tower == TowerType.FIRE:

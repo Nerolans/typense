@@ -1,6 +1,8 @@
 extends Node
 
-var gold: int = 500
+signal menu_opened(source)
+
+var gold: int = 50
 signal gold_changed(new_amount)
 
 func add_gold(amount) -> int:
