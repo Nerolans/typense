@@ -832,10 +832,10 @@ layout_mode = 2
 position = Vector2(605, 862)
 
 [node name="GoldLabel" type="Label" parent="." unique_id=1864503427]
-offset_left = 906.0
-offset_top = 971.0
-offset_right = 946.0
-offset_bottom = 1013.0
+offset_left = 870.0
+offset_top = 965.0
+offset_right = 910.0
+offset_bottom = 1007.0
 theme_override_colors/font_color = Color(18.892002, 18.892002, 18.892002, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
