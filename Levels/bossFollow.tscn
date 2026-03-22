@@ -7,12 +7,14 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5t6dh"]
 size = Vector2(40, 34)
 
-[node name="BossFollow" type="PathFollow2D" unique_id=1692811789]
+[node name="BossFollow" type="PathFollow2D" unique_id=1692811789 groups=["enemies"]]
 rotates = false
 loop = false
 script = ExtResource("1_5t6dh")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1474218423]
+[node name="Area2D" type="Area2D" parent="." unique_id=1474218423 groups=["enemies"]]
+collision_layer = 2
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=140425706]
 shape = SubResource("RectangleShape2D_5t6dh")
