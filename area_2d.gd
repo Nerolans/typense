@@ -16,6 +16,7 @@ const SELL_RATIO = 0.5
 @onready var btn_tower2 = $"CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer/BtnTower2"
 @onready var btn_sell = $"CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer/BtnSell"
 @onready var gold_label = $"/root/LevelTest/GoldLabel"
+@onready var animatedLabel = $"/root/LevelTest/GoldAnimated"
 @export var TURRET_FIRE: PackedScene = null  
 @onready var spawn_points = [$TurretSpawn1]    
 
@@ -28,12 +29,12 @@ func _ready():
 	btn_tower1.pressed.connect(_on_btn_tower1)
 	btn_tower2.pressed.connect(_on_btn_tower2)
 	btn_sell.pressed.connect(_on_btn_sell)
-	gold_label.text = "💰 : %d" % Money.gold
+	gold_label.text = " : %d" % Money.gold
 	Money.gold_changed.connect(_on_gold_changed)
 	Money.menu_opened.connect(_on_any_menu_opened)
 	
 func _on_gold_changed(new_amount):
-	gold_label.text = "💰 : %d" % new_amount
+	gold_label.text = " : %d" % new_amount
 
 func _on_any_menu_opened(source):
 	if source != self :
@@ -46,12 +47,16 @@ func _on_input_event(_viewport, event, _shape_idx):
 
 func _open_menu():
 	Money.menu_opened.emit(self)
+	animatedLabel.position.x = 850
+	animatedLabel.position.y = 943
 	gold_label.position.y = 920
 	gold_label.position.x = 870
 	menu.visible = true
 	_update_menu()
 
 func _close_menu():
+	animatedLabel.position.x = 850
+	animatedLabel.position.y = 988
 	gold_label.position.y = 965.0
 	gold_label.position.x = 870
 	menu.visible = false
