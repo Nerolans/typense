@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream
 uid="uid://dkcmm8smvkt6a"
+=======
+uid="uid://vbud0i3tr8o2"
+>>>>>>> Stashed changes
 path="res://.godot/imported/coinSpriteSheet.png-ebd6fd830c6ab75fc5293cb0d8466347.ctex"
 metadata={
 "vram_texture": false

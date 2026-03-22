@@ -1,8 +1,13 @@
+<<<<<<< Updated upstream
 [gd_scene format=3 uid="uid://x2om5njbxf4w"]
+=======
+[gd_scene format=3 uid="uid://jy7mgxatk03d"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Script" uid="uid://hdvpucm8tquc" path="res://Levels/Assets/level_test.gd" id="1_vd23k"]
 [ext_resource type="Script" uid="uid://dajji2pu0ipq2" path="res://Levels/path_2d_2.gd" id="2_jglcl"]
 [ext_resource type="Texture2D" uid="uid://x8vbdofsyh57" path="res://level2.png" id="2_vd23k"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://cepurusfmk1ru" path="res://Levels/enemyFollow2.tscn" id="4_vd23k"]
 [ext_resource type="PackedScene" uid="uid://bnq8bk3qbs4my" path="res://core.tscn" id="8_mbwna"]
 [ext_resource type="Texture2D" uid="uid://fc4w8y8voijj" path="res://spriteSheet78.png" id="8_vd23k"]
@@ -10,6 +15,11 @@
 [ext_resource type="Script" uid="uid://cdwiqjoxi155f" path="res://core.gd" id="9_v023s"]
 [ext_resource type="PackedScene" path="res://goldAnimated.tscn" id="9_x7rwe"]
 [ext_resource type="Texture2D" uid="uid://dkcmm8smvkt6a" path="res://coinSpriteSheet.png" id="10_lf2mf"]
+=======
+[ext_resource type="PackedScene" uid="uid://bmgymndufb4ee" path="res://Levels/enemyFollow2.tscn" id="4_vd23k"]
+[ext_resource type="PackedScene" uid="uid://bnq8bk3qbs4my" path="res://core.tscn" id="8_mbwna"]
+[ext_resource type="Script" uid="uid://cdwiqjoxi155f" path="res://core.gd" id="9_v023s"]
+>>>>>>> Stashed changes
 
 [sub_resource type="Curve2D" id="Curve2D_w0h0a"]
 _data = {
@@ -17,6 +27,7 @@ _data = {
 }
 point_count = 13
 
+<<<<<<< Updated upstream
 [sub_resource type="AtlasTexture" id="AtlasTexture_j6px6"]
 atlas = ExtResource("10_lf2mf")
 region = Rect2(0, 0, 64, 64)
@@ -91,6 +102,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x7rwe"]
 size = Vector2(64, 64)
 
+=======
+>>>>>>> Stashed changes
 [node name="Level2" type="Node2D" unique_id=1823012563]
 script = ExtResource("1_vd23k")
 
@@ -103,9 +116,14 @@ curve = SubResource("Curve2D_w0h0a")
 script = ExtResource("2_jglcl")
 
 [node name="enemy2follow" parent="Path2D2" unique_id=2127768769 instance=ExtResource("4_vd23k")]
+<<<<<<< Updated upstream
 position = Vector2(351.05667, 730.29285)
 rotation = 1.5707964
 progress = 1721.1
+=======
+position = Vector2(22, 351)
+rotation = 1.5707964
+>>>>>>> Stashed changes
 
 [node name="GoldLabel" type="Label" parent="." unique_id=1864503427]
 offset_left = 870.0
@@ -122,6 +140,7 @@ theme_override_font_sizes/font_size = 30
 position = Vector2(351, 603)
 scale = Vector2(1.4453127, 1.5078127)
 script = ExtResource("9_v023s")
+<<<<<<< Updated upstream
 
 [node name="GoldAnimated" parent="." unique_id=1921761808 instance=ExtResource("9_x7rwe")]
 position = Vector2(850, 988)
@@ -540,3 +559,5 @@ layout_mode = 2
 
 [node name="TurretSpawn1" type="Marker2D" parent="Area2D10" unique_id=1075107729]
 position = Vector2(112, 424)
+=======
+>>>>>>> Stashed changes

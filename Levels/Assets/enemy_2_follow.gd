@@ -1,7 +1,7 @@
 extends PathFollow2D
-var timer = 0
+
 @export var runSpeed = 40
-var oldspeed = 0
+
 func _ready():
 	$Enemy.stop()
 	$Enemy.play("down")
@@ -29,72 +29,51 @@ func getlastChr()->String:
 	var label = get_child(2)
 	var chr = label.text[label.text.length()-label.lives-1]
 	return chr
-var slowed = false
-func set_runspeed(debuff:int):
-	if slowed == false:
-		oldspeed = runSpeed
-		runSpeed = runSpeed/debuff
-		slowed = true
-		
-	timer = 0
-		
-			
-			
 
 
 
 func _process(delta):
-	if slowed ==true:
-		timer += delta
-		if timer > 5:
-			print(timer)
-			runSpeed = oldspeed
-			timer = 0  
+
 	progress = (progress + runSpeed * delta)
 	var progressConc = snapped(progress,1)
 
-	if progressConc == 0:
-		$Enemy.stop()#TEEEEST
-		$Enemy.play("down")
-	elif progressConc >= 130 && progressConc <= 140  :
-		$Enemy.stop()
-		$Enemy.play("left")
-	elif progressConc >= 382 && progressConc <= 392:
-		$Enemy.stop()
-		$Enemy.play("down")
-	elif progressConc >= 509 && progressConc <= 520  :
+	if progressConc >= 0 && progressConc <= 5:
 		$Enemy.stop()
 		$Enemy.play("right")
-	elif progressConc >= 636 && progressConc <= 646:
+	elif progressConc >= 198 && progressConc <= 205:
 		$Enemy.stop()
 		$Enemy.play("down")
-	elif progressConc >= 836 && progressConc <= 846:
-		$Enemy.stop()
-		$Enemy.play("left")
-	elif progressConc >= 1029 && progressConc <= 1039:
-		$Enemy.stop()
-		$Enemy.play("down")
-	elif progressConc >= 1145 && progressConc <= 1152:
+	elif progressConc >= 323 && progressConc <= 330:
 		$Enemy.stop()
 		$Enemy.play("right")
-	elif progressConc >= 1535 && progressConc <= 1542:
+	elif progressConc >= 576 && progressConc <= 580:
 		$Enemy.stop()
 		$Enemy.play("up")
-	elif progressConc >= 1662 && progressConc <= 1670:
+	elif progressConc >= 645 && progressConc <= 650:
 		$Enemy.stop()
 		$Enemy.play("right")
-	elif progressConc >= 1792 && progressConc <= 1800:
+	elif progressConc >= 837 && progressConc <= 845:
 		$Enemy.stop()
 		$Enemy.play("down")
-	elif progressConc >= 2115 && progressConc <= 2120:
+	elif progressConc >= 1025 && progressConc <= 1030:
 		$Enemy.stop()
-		$Enemy.play("left")
-	elif progressConc >= 2245 && progressConc <= 2251:
+		$Enemy.play("right")
+	elif progressConc >= 1085 && progressConc <= 1090:
 		$Enemy.stop()
 		$Enemy.play("down")
-	elif progressConc >= 2372 && progressConc <= 2378:
+	elif progressConc >= 1285 && progressConc <= 1290:
 		$Enemy.stop()
 		$Enemy.play("left")
+	elif progressConc >= 1467 && progressConc <= 1475:
+		$Enemy.stop()
+		$Enemy.play("up")
+	elif progressConc >= 1530 && progressConc <= 1535:
+		$Enemy.stop()
+		$Enemy.play("left")
+	elif progressConc >= 1715 && progressConc <= 1720:
+		$Enemy.stop()
+		$Enemy.play("up")
+		
 	if progress_ratio == 1:
 		get_parent().kills+=1
 		get_parent().loseLive()
