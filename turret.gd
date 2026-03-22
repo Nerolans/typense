@@ -1,5 +1,5 @@
 extends Node2D
-enum TowerType { NONE, FIRE, ANTILETTER }
+enum TowerType { NONE, SLOWER, ANTILETTER }
 @export var BULLET: PackedScene = null
 @onready var screensize  = get_viewport_rect().size
 @onready var gunSprite = $GunSprite
@@ -15,8 +15,8 @@ func _ready():
 	await get_tree().process_frame
 	bullet_atribution()
 	target = find_target()
-	if type_string == "Fire":
-		gunSprite.play("level1")
+	if type_string == "Slower":
+		gunSprite.play("slow1")
 	if type_string == "Antiletter":
 		gunSprite.play("antiletter1") 
 func _physics_process(_delta):
@@ -68,16 +68,16 @@ func _on_reload_timer_timeout():
 	rayCast.enabled = true
 
 func level_up(new_level: int):
-	if type_string == "Fire":
+	if type_string == "Slower":
 		if new_level == 1:
 			reloadTimer.wait_time = 2.5
-			gunSprite.play("level1")
+			gunSprite.play("slow1")
 		if new_level == 2:
 			reloadTimer.wait_time = 1.0
-			gunSprite.play("level2")
+			gunSprite.play("slow2")
 		elif new_level == 3:
 			reloadTimer.wait_time = 0.3
-			gunSprite.play("level3")
+			gunSprite.play("slow3")
 	if type_string == "Antiletter":
 		if new_level == 1:
 			reloadTimer.wait_time = 2.5
@@ -92,13 +92,13 @@ func sell(new_level: int):
 	queue_free()
 func setType(newturret_type : TowerType):
 	turret_type = newturret_type
-	if	turret_type == TowerType.FIRE:
-		gunSprite.play("level1")
+	if	turret_type == TowerType.SLOWER:
+		gunSprite.play("slow1")
 	if	turret_type == TowerType.ANTILETTER:
 		gunSprite.play("antiletter1")
 func bullet_atribution():
-	if turret_type == TowerType.FIRE:
-		type_string = "Fire"
+	if turret_type == TowerType.SLOWER:
+		type_string = "Slower"
 	if turret_type == TowerType.ANTILETTER:
 		type_string = "Antiletter"
 		

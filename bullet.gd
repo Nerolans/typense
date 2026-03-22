@@ -23,7 +23,7 @@ func _on_area_entered(area):
 	if bullet_type == "Antiletter":
 		area.get_parent().loseLive()
 		destroy()
-	if bullet_type == "Fire":
+	if bullet_type == "Slower":
 		area.get_parent().set_runspeed(2) 
 		
 func set_bulletType(newtype:String):

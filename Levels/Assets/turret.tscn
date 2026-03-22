@@ -3,19 +3,6 @@
 [ext_resource type="Script" uid="uid://caixpsw5vewgf" path="res://turret.gd" id="1_dgd6u"]
 [ext_resource type="PackedScene" uid="uid://dj8ieoe2fmwgj" path="res://Levels/Assets/bullet.tscn" id="2_eqv6u"]
 [ext_resource type="Texture2D" uid="uid://fc4w8y8voijj" path="res://spriteSheet78.png" id="3_oo162"]
-[ext_resource type="Script" uid="uid://dyp0j31a8tmge" path="res://Levels/Assets/gun_sprite.gd" id="5_gorcm"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ehpjk"]
-atlas = ExtResource("3_oo162")
-region = Rect2(384, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_th3qd"]
-atlas = ExtResource("3_oo162")
-region = Rect2(192, 192, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h8fi1"]
-atlas = ExtResource("3_oo162")
-region = Rect2(64, 256, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oo162"]
 atlas = ExtResource("3_oo162")
@@ -29,6 +16,18 @@ region = Rect2(192, 384, 64, 64)
 atlas = ExtResource("3_oo162")
 region = Rect2(64, 448, 64, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehpjk"]
+atlas = ExtResource("3_oo162")
+region = Rect2(384, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_th3qd"]
+atlas = ExtResource("3_oo162")
+region = Rect2(192, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8fi1"]
+atlas = ExtResource("3_oo162")
+region = Rect2(64, 256, 64, 64)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_26e0k"]
 atlas = ExtResource("3_oo162")
 region = Rect2(384, 512, 64, 64)
@@ -37,7 +36,7 @@ region = Rect2(384, 512, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ehpjk")
+"texture": SubResource("AtlasTexture_oo162")
 }],
 "loop": true,
 "name": &"antiletter1",
@@ -45,7 +44,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_th3qd")
+"texture": SubResource("AtlasTexture_gorcm")
 }],
 "loop": true,
 "name": &"antiletter2",
@@ -53,7 +52,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h8fi1")
+"texture": SubResource("AtlasTexture_jy7ju")
 }],
 "loop": true,
 "name": &"antiletter3",
@@ -61,26 +60,26 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_oo162")
+"texture": SubResource("AtlasTexture_ehpjk")
 }],
 "loop": true,
-"name": &"level1",
+"name": &"slow1",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gorcm")
+"texture": SubResource("AtlasTexture_th3qd")
 }],
 "loop": true,
-"name": &"level2",
+"name": &"slow2",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jy7ju")
+"texture": SubResource("AtlasTexture_h8fi1")
 }],
 "loop": true,
-"name": &"level3",
+"name": &"slow3",
 "speed": 5.0
 }, {
 "frames": [{
@@ -92,7 +91,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="turret" type="Node2D" unique_id=107194994]
+[node name="turret2" type="Node2D" unique_id=107194994]
 script = ExtResource("1_dgd6u")
 BULLET = ExtResource("2_eqv6u")
 
@@ -100,7 +99,7 @@ BULLET = ExtResource("2_eqv6u")
 
 [node name="GunSprite" type="AnimatedSprite2D" parent="." unique_id=823556208]
 sprite_frames = SubResource("SpriteFrames_gorcm")
-animation = &"antiletter1"
+animation = &"slow1"
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=2143438653]
 target_position = Vector2(0, 53)

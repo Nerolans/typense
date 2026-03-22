@@ -6,12 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://b65s4her4y3wh" path="res://Levels/Assets/enemyFollow.tscn" id="3_p2k11"]
 [ext_resource type="Script" uid="uid://wvspadqttau4" path="res://area_2d.gd" id="4_p2k11"]
 [ext_resource type="Texture2D" uid="uid://fc4w8y8voijj" path="res://spriteSheet78.png" id="6_flbus"]
-[ext_resource type="PackedScene" uid="uid://ddal1c1w7x4f2" path="res://Levels/Assets/turret.tscn" id="6_sbrn2"]
 [ext_resource type="PackedScene" path="res://core.tscn" id="8_d2xh1"]
-[ext_resource type="Script" uid="uid://cdwiqjoxi155f" path="res://core.gd" id="9_cc3a2"]
-[ext_resource type="PackedScene" uid="uid://diknirj7jlyv5" path="res://goldAnimated.tscn" id="10_fdrc5"]
+[ext_resource type="Script" path="res://core.gd" id="9_cc3a2"]
+[ext_resource type="PackedScene" path="res://goldAnimated.tscn" id="10_fdrc5"]
 [ext_resource type="Texture2D" uid="uid://cju738pp8un4p" path="res://coinSpriteSheet.png" id="11_6o64c"]
-[ext_resource type="PackedScene" uid="uid://clr0xd8oh338t" path="res://Levels/GoldAnimated.tscn" id="10_giyf1"]
 
 [sub_resource type="Curve2D" id="Curve2D_sbrn2"]
 _data = {
@@ -110,7 +108,6 @@ rotation = 1.5783719
 
 [node name="Area2D" type="Area2D" parent="." unique_id=191616505]
 script = ExtResource("4_p2k11")
-TURRET_FIRE = ExtResource("6_sbrn2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=106989070]
 position = Vector2(352, 352)
@@ -157,7 +154,6 @@ position = Vector2(352, 352)
 
 [node name="Area2D2" type="Area2D" parent="." unique_id=956310743]
 script = ExtResource("4_p2k11")
-TURRET_FIRE = ExtResource("6_sbrn2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D2" unique_id=1241688811]
 position = Vector2(286, 286)
@@ -204,7 +200,6 @@ position = Vector2(286, 286)
 
 [node name="Area2D3" type="Area2D" parent="." unique_id=429690041]
 script = ExtResource("4_p2k11")
-TURRET_FIRE = ExtResource("6_sbrn2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D3" unique_id=1982139425]
 position = Vector2(545, 290)
@@ -251,7 +246,6 @@ position = Vector2(545, 290)
 
 [node name="Area2D4" type="Area2D" parent="." unique_id=1625086901]
 script = ExtResource("4_p2k11")
-TURRET_FIRE = ExtResource("6_sbrn2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D4" unique_id=1331807524]
 position = Vector2(541, 478)
@@ -298,7 +292,6 @@ position = Vector2(541, 478)
 
 [node name="Area2D5" type="Area2D" parent="." unique_id=928095848]
 script = ExtResource("4_p2k11")
-TURRET_FIRE = ExtResource("6_sbrn2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D5" unique_id=1832469831]
 position = Vector2(351, 543)
@@ -345,7 +338,6 @@ position = Vector2(351, 543)
 
 [node name="Area2D6" type="Area2D" parent="." unique_id=1449464687]
 script = ExtResource("4_p2k11")
-TURRET_FIRE = ExtResource("6_sbrn2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D6" unique_id=267160271]
 position = Vector2(416, 543)
@@ -392,7 +384,6 @@ position = Vector2(416, 543)
 
 [node name="Area2D7" type="Area2D" parent="." unique_id=1570108784]
 script = ExtResource("4_p2k11")
-TURRET_FIRE = ExtResource("6_sbrn2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D7" unique_id=725641694]
 position = Vector2(481, 543)
@@ -439,7 +430,6 @@ position = Vector2(481, 543)
 
 [node name="Area2D8" type="Area2D" parent="." unique_id=1052304809]
 script = ExtResource("4_p2k11")
-TURRET_FIRE = ExtResource("6_sbrn2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D8" unique_id=1041057309]
 position = Vector2(355, 673)
@@ -486,7 +476,6 @@ position = Vector2(356, 673)
 
 [node name="Area2D9" type="Area2D" parent="." unique_id=1990450782]
 script = ExtResource("4_p2k11")
-TURRET_FIRE = ExtResource("6_sbrn2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D9" unique_id=585958194]
 position = Vector2(221, 605)
@@ -533,7 +522,6 @@ position = Vector2(221, 605)
 
 [node name="Area2D10" type="Area2D" parent="." unique_id=1349455931]
 script = ExtResource("4_p2k11")
-TURRET_FIRE = ExtResource("6_sbrn2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D10" unique_id=252052025]
 position = Vector2(416, 224)
@@ -580,7 +568,6 @@ position = Vector2(416, 224)
 
 [node name="Area2D11" type="Area2D" parent="." unique_id=766697818]
 script = ExtResource("4_p2k11")
-TURRET_FIRE = ExtResource("6_sbrn2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D11" unique_id=1661414647]
 position = Vector2(545, 225)
@@ -627,7 +614,6 @@ position = Vector2(545, 225)
 
 [node name="Area2D12" type="Area2D" parent="." unique_id=703176718]
 script = ExtResource("4_p2k11")
-TURRET_FIRE = ExtResource("6_sbrn2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D12" unique_id=267191043]
 position = Vector2(673, 414)
@@ -674,7 +660,6 @@ position = Vector2(673, 414)
 
 [node name="Area2D13" type="Area2D" parent="." unique_id=969993473]
 script = ExtResource("4_p2k11")
-TURRET_FIRE = ExtResource("6_sbrn2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D13" unique_id=753908480]
 position = Vector2(737, 544)
@@ -721,7 +706,6 @@ position = Vector2(737, 544)
 
 [node name="Area2D14" type="Area2D" parent="." unique_id=2107384831]
 script = ExtResource("4_p2k11")
-TURRET_FIRE = ExtResource("6_sbrn2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D14" unique_id=652432475]
 position = Vector2(665, 672)
@@ -768,7 +752,6 @@ position = Vector2(665, 672)
 
 [node name="Area2D15" type="Area2D" parent="." unique_id=2051024960]
 script = ExtResource("4_p2k11")
-TURRET_FIRE = ExtResource("6_sbrn2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D15" unique_id=838559]
 position = Vector2(734, 736)
@@ -815,7 +798,6 @@ position = Vector2(734, 736)
 
 [node name="Area2D16" type="Area2D" parent="." unique_id=680085915]
 script = ExtResource("4_p2k11")
-TURRET_FIRE = ExtResource("6_sbrn2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D16" unique_id=1471096135]
 position = Vector2(797, 865)
@@ -862,7 +844,6 @@ position = Vector2(797, 865)
 
 [node name="Area2D17" type="Area2D" parent="." unique_id=2040797471]
 script = ExtResource("4_p2k11")
-TURRET_FIRE = ExtResource("6_sbrn2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D17" unique_id=351198688]
 position = Vector2(605, 862)
