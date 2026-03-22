@@ -22,20 +22,20 @@ func loseLive():
 
 	if label.lives < 0:
 		get_parent().kills+=1
-		Money.add_gold(8)
+		Money.add_gold(5)
 		queue_free()
 
 func getlastChr()->String:
 	var label = get_child(2)
 	var chr = label.text[label.text.length()-label.lives-1]
 	return chr
+
 var slowed = false
 func set_runspeed(debuff:int):
 	if slowed == false:
 		oldspeed = runSpeed
 		runSpeed = runSpeed/debuff
 		slowed = true
-		
 	timer = 0
 		
 			
@@ -74,29 +74,26 @@ func _process(delta):
 	elif progressConc >= 1029 && progressConc <= 1039:
 		$Enemy.stop()
 		$Enemy.play("down")
-	elif progressConc >= 1145 && progressConc <= 1152:
+	elif progressConc == 1152:
 		$Enemy.stop()
 		$Enemy.play("right")
-	elif progressConc >= 1535 && progressConc <= 1542:
+	elif progressConc == 1541:
 		$Enemy.stop()
 		$Enemy.play("up")
-	elif progressConc >= 1662 && progressConc <= 1670:
+	elif progressConc == 1666:
 		$Enemy.stop()
 		$Enemy.play("right")
-	elif progressConc >= 1792 && progressConc <= 1800:
+	elif progressConc == 1796:
 		$Enemy.stop()
 		$Enemy.play("down")
-	elif progressConc >= 2115 && progressConc <= 2120:
+	elif progressConc == 2118:
 		$Enemy.stop()
 		$Enemy.play("left")
-	elif progressConc >= 2245 && progressConc <= 2251:
+	elif progressConc == 2248:
 		$Enemy.stop()
 		$Enemy.play("down")
-	elif progressConc >= 2372 && progressConc <= 2378:
+	elif progressConc == 2375:
 		$Enemy.stop()
 		$Enemy.play("left")
 	if progress_ratio == 1:
-		get_parent().kills+=1
-		get_parent().loseLive()
-		Money.add_gold(8)
 		queue_free()

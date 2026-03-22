@@ -10,6 +10,7 @@ size = Vector2(64, 64)
 [node name="Area2D" type="Area2D" unique_id=1929193940]
 script = ExtResource("1_clqkr")
 TURRET_FIRE = ExtResource("2_dcakf")
+TURRET_ANTILETTER = ExtResource("2_dcakf")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=348542005]
 position = Vector2(352, 352)

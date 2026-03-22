@@ -1,7 +1,8 @@
 extends PathFollow2D
 
 @export var runSpeed = 40
-
+var oldspeed = 0
+var timer = 0
 func _ready():
 	$Boss.stop()
 	$Boss.play("default")
@@ -33,10 +34,22 @@ func getlastChr()->String:
 	var chr = label.text[label.text.length()-label.lives-1]
 	return chr
 
+var slowed = false
+func set_runspeed(debuff:int):
+	if slowed == false:
+		oldspeed = runSpeed
+		runSpeed = runSpeed/debuff
+		slowed = true
+	timer = 0
 
 
 func _process(delta):
-
+	if slowed ==true:
+		timer += delta
+		if timer > 5:
+			print(timer)
+			runSpeed = oldspeed
+			timer = 0  
 	progress = (progress + runSpeed * delta)
 	var progressConc = snapped(progress,1)
 	

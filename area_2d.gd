@@ -1,5 +1,5 @@
 extends Area2D
-
+signal background_clicked()
 enum TowerType { NONE, FIRE, ANTILETTER }
 var current_tower: TowerType = TowerType.NONE
 var current_level: int = 0
@@ -17,7 +17,8 @@ const SELL_RATIO = 0.5
 @onready var btn_sell = $"CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer/BtnSell"
 @onready var gold_label = $"/root/LevelTest/GoldLabel"
 @onready var animatedLabel = $"/root/LevelTest/GoldAnimated"
-@export var TURRET_FIRE: PackedScene = null  
+@export var TURRET_FIRE: PackedScene = preload("res://Levels/turret.tscn")
+@export var TURRET_ANTILETTER: PackedScene = preload("res://Levels/turret.tscn")
 @onready var spawn_points = [$TurretSpawn1]    
 
 
@@ -96,6 +97,8 @@ func _update_menu():
 				btn_tower2.visible = false
 
 func _on_btn_tower1():
+	print("TURRET_FIRE = ", TURRET_FIRE)
+	print("TURRET_ANTILETTER = ", TURRET_ANTILETTER)
 	if Money.spend_gold(COSTS["fire"][current_level]):
 		if current_tower == TowerType.NONE:
 			current_tower = TowerType.FIRE
@@ -103,6 +106,7 @@ func _on_btn_tower1():
 			var turret = TURRET_FIRE.instantiate()
 			get_tree().current_scene.add_child(turret)
 			turret.position =  $TurretSpawn1.global_position
+			turret.setType(current_tower)
 			turret_node = turret
 			_update_menu()
 			print("area position: ", global_position)
@@ -117,10 +121,18 @@ func _on_btn_tower1():
 		print("Your balance is : ", Money.gold, " but you need : ", COSTS["fire"][current_level])
 
 func _on_btn_tower2():
+	print("TURRET_ANTILETTER = ", TURRET_ANTILETTER)
 	if Money.spend_gold(COSTS["antiletter"][current_level]):
 		if current_tower == TowerType.NONE:
 			current_tower = TowerType.ANTILETTER
 			current_level = 1
+			var turret = TURRET_ANTILETTER.instantiate()
+			get_tree().current_scene.add_child(turret)
+			turret.position =  $TurretSpawn1.global_position
+			turret.setType(current_tower)
+			turret_node = turret
+			print("area position: ", global_position)
+			print("turret position: ", turret.global_position)
 		elif current_tower == TowerType.ANTILETTER:
 			current_level += 1
 			if turret_node != null:

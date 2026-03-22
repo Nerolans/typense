@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< Updated upstream
-uid="uid://cju738pp8un4p"
-=======
-uid="uid://vbud0i3tr8o2"
->>>>>>> Stashed changes
-path="res://.godot/imported/coinSpriteSheet.png-ebd6fd830c6ab75fc5293cb0d8466347.ctex"
+uid="uid://c75bxw2kjiw2p"
+path="res://.godot/imported/level2.png-1109c0c818ffa173e927c6ff7f67502c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://coinSpriteSheet.png"
-dest_files=["res://.godot/imported/coinSpriteSheet.png-ebd6fd830c6ab75fc5293cb0d8466347.ctex"]
+source_file="res://Levels/level2.png"
+dest_files=["res://.godot/imported/level2.png-1109c0c818ffa173e927c6ff7f67502c.ctex"]
 
 [params]
 

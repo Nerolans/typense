@@ -1,9 +1,8 @@
-[gd_scene format=3 uid="uid://ddal1c1w7x4f2"]
+[gd_scene format=3 uid="uid://d33abn40a3m3p"]
 
 [ext_resource type="Script" uid="uid://caixpsw5vewgf" path="res://turret.gd" id="1_dgd6u"]
-[ext_resource type="PackedScene" uid="uid://dj8ieoe2fmwgj" path="res://Levels/Assets/bullet.tscn" id="2_eqv6u"]
+[ext_resource type="PackedScene" uid="uid://ckmpx7u3tl35s" path="res://Levels/bullet.tscn" id="2_eqv6u"]
 [ext_resource type="Texture2D" uid="uid://fc4w8y8voijj" path="res://spriteSheet78.png" id="3_oo162"]
-[ext_resource type="Script" uid="uid://dyp0j31a8tmge" path="res://Levels/Assets/gun_sprite.gd" id="5_gorcm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ehpjk"]
 atlas = ExtResource("3_oo162")

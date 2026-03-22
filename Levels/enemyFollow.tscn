@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bmguf1lf7vk8c"]
+
+[ext_resource type="Script" path="res://Levels/enemy_1_follow.gd" id="1_2c7xp"]
+[ext_resource type="PackedScene" uid="uid://b2kje8lx8udrp" path="res://enemy.tscn" id="2_g2ee1"]
+[ext_resource type="Script" path="res://Levels/rich_text_label.gd" id="3_g2ee1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2c7xp"]
+size = Vector2(55.5, 51)
+
+[node name="enemy1follow" type="PathFollow2D" unique_id=2022373029 groups=["enemies"]]
+rotation = 1.5707964
+rotates = false
+loop = false
+script = ExtResource("1_2c7xp")
+
+[node name="Enemy" parent="." unique_id=1347766483 instance=ExtResource("2_g2ee1")]
+rotation = -1.5707964
+frame_progress = 0.27828547
+script = null
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1115767181]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=371875900]
+visibility_layer = 2
+position = Vector2(0.7500011, -0.49999812)
+shape = SubResource("RectangleShape2D_2c7xp")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=794207116]
+offset_left = 21.000008
+offset_top = 155.0
+offset_right = 331.0
+offset_bottom = 179.0
+rotation = -1.5707964
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "coop"
+scroll_active = false
+horizontal_alignment = 1
+script = ExtResource("3_g2ee1")

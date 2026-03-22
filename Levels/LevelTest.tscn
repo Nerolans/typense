@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://cdwiqjoxi155f" path="res://core.gd" id="9_cc3a2"]
 [ext_resource type="PackedScene" uid="uid://diknirj7jlyv5" path="res://goldAnimated.tscn" id="10_fdrc5"]
 [ext_resource type="Texture2D" uid="uid://cju738pp8un4p" path="res://coinSpriteSheet.png" id="11_6o64c"]
+[ext_resource type="PackedScene" uid="uid://clr0xd8oh338t" path="res://Levels/GoldAnimated.tscn" id="10_giyf1"]
 
 [sub_resource type="Curve2D" id="Curve2D_sbrn2"]
 _data = {
