@@ -105,7 +105,7 @@ curve = SubResource("Curve2D_w0h0a")
 script = ExtResource("2_jglcl")
 
 [node name="enemy2follow" parent="Path2D2" unique_id=2127768769 instance=ExtResource("4_vd23k")]
-position = Vector2(351.05667, 730.29285)
+position = Vector2(24, 343)
 rotation = 1.5707964
 progress = 1721.1
 

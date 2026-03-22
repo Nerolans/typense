@@ -23,7 +23,7 @@ func _process(delta):
 		add_child(newFollower)
 		timer = 0
 	
-	if kills % 20 == 0 && boss == false:
+	if kills > 0 && kills % 20 == 0 && boss == false:
 		tmpTime = spawnTime
 		boss = true
 		spawnTime = 30

@@ -19,10 +19,9 @@ func _process(delta):
 		add_child(newFollower)
 		timer = 0
 	
-	if kills == 15 && boss == false:
+	if kills == 1 && boss == false:
 		boss = true
 		spawnTime = 30
-		var boss:PackedScene = preload("res://Levels/bossFollow.tscn")
 		var newBoss = boss.instantiate()
 		add_child(newBoss)
 		newBoss.runSpeed = 200

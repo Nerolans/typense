@@ -2,7 +2,7 @@ extends Node
 
 signal menu_opened(source)
 
-var gold: int = 5000
+var gold: int = 400
 signal gold_changed(new_amount)
 
 func add_gold(amount) -> int:
