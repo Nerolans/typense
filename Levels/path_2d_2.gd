@@ -36,6 +36,7 @@ func sort_childrens(a, b):
 	return a.progress > b.progress
 
 func _input(event):
+	var LettersNumbers = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
 	if event.is_pressed():
 		if get_child_count() != 0:
 			var childs = get_children()
@@ -43,8 +44,9 @@ func _input(event):
 			var oldest = childs[0]
 			if event.as_text() == oldest.getlastChr():
 				oldest.loseLive()
-			else:
+			elif event.as_text() in LettersNumbers:
 				oldest.runSpeed = oldest.runSpeed * 1.2
+				
 				
 func loseLive():
 	get_parent().loseLive()
