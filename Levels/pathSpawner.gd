@@ -63,4 +63,4 @@ func _input(event):
 				oldest.loseLive()
 				
 func loseLive():
-	$Core.lives-=1
+	get_parent().loseLive()

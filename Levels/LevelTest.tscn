@@ -34,11 +34,6 @@ script = ExtResource("2_7b0me")
 position = Vector2(608, 27)
 rotation = 1.5783719
 
-[node name="Core" parent="Path2D" unique_id=1307836770 instance=ExtResource("8_d2xh1")]
-position = Vector2(615, 923)
-scale = Vector2(1.765625, 1.765625)
-script = ExtResource("9_cc3a2")
-
 [node name="Area2D" type="Area2D" parent="." unique_id=191616505]
 script = ExtResource("4_p2k11")
 TURRET_FIRE = ExtResource("6_sbrn2")
@@ -848,3 +843,8 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
 theme_override_constants/shadow_outline_size = 1
 theme_override_font_sizes/font_size = 30
+
+[node name="Core" parent="." unique_id=1307836770 instance=ExtResource("8_d2xh1")]
+position = Vector2(615, 923)
+scale = Vector2(1.765625, 1.765625)
+script = ExtResource("9_cc3a2")
