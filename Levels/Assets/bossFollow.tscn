@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dst7yer5o0po5"]
 
-[ext_resource type="Script" uid="uid://cxlbf8jktwbkt" path="res://Levels/boss_follow.gd" id="1_5t6dh"]
+[ext_resource type="Script" uid="uid://cxlbf8jktwbkt" path="res://Levels/Assets/boss_follow.gd" id="1_5t6dh"]
 [ext_resource type="PackedScene" uid="uid://b5p0nn4ihro3j" path="res://boss.tscn" id="1_2316b"]
-[ext_resource type="Script" uid="uid://w4lbjrngujev" path="res://Levels/boss_rich_text_label.gd" id="3_r6ccb"]
+[ext_resource type="Script" uid="uid://w4lbjrngujev" path="res://Levels/Assets/boss_rich_text_label.gd" id="3_r6ccb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5t6dh"]
 size = Vector2(40, 34)

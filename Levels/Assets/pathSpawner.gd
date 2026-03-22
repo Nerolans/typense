@@ -6,7 +6,7 @@ var kills = 0
 var boss = false
 var tmpTime = 0
 
-var follower:PackedScene = preload("res://Levels/enemyFollow.tscn")
+var follower:PackedScene = preload("res://Levels/Assets/enemyFollow.tscn")
 func _process(delta):
 	timer = timer + delta
 
@@ -27,7 +27,7 @@ func _process(delta):
 		tmpTime = spawnTime
 		boss = true
 		spawnTime = 30
-		var boss:PackedScene = preload("res://Levels/bossFollow.tscn")
+		var boss:PackedScene = preload("res://Levels/Assets/bossFollow.tscn")
 		var newBoss = boss.instantiate()
 		add_child(newBoss)
 		newBoss.runSpeed = 230
@@ -36,7 +36,7 @@ func _process(delta):
 		tmpTime = spawnTime
 		boss = true
 		spawnTime = 30
-		var boss:PackedScene = preload("res://Levels/bossFollow.tscn")
+		var boss:PackedScene = preload("res://Levels/Assets/bossFollow.tscn")
 		var newBoss = boss.instantiate()
 		add_child(newBoss)
 		newBoss.runSpeed = 260
@@ -45,7 +45,7 @@ func _process(delta):
 		tmpTime = spawnTime
 		boss = true
 		spawnTime = 30
-		var boss:PackedScene = preload("res://Levels/bossFollow.tscn")
+		var boss:PackedScene = preload("res://Levels/Assets/bossFollow.tscn")
 		var newBoss = boss.instantiate()
 		add_child(newBoss)
 		newBoss.runSpeed = 130

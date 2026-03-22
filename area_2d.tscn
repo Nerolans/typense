@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bxi780aye81oc"]
 
 [ext_resource type="Script" uid="uid://wvspadqttau4" path="res://area_2d.gd" id="1_clqkr"]
-[ext_resource type="PackedScene" uid="uid://ddal1c1w7x4f2" path="res://Levels/turret.tscn" id="2_dcakf"]
+[ext_resource type="PackedScene" uid="uid://ddal1c1w7x4f2" path="res://Levels/Assets/turret.tscn" id="2_dcakf"]
 [ext_resource type="Texture2D" uid="uid://fc4w8y8voijj" path="res://spriteSheet78.png" id="3_jp6lh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sbrn2"]
