@@ -2,13 +2,14 @@
 
 [ext_resource type="Script" uid="uid://hdvpucm8tquc" path="res://Levels/Assets/level_test.gd" id="1_vd23k"]
 [ext_resource type="Script" uid="uid://dajji2pu0ipq2" path="res://Levels/path_2d_2.gd" id="2_jglcl"]
+[ext_resource type="PackedScene" uid="uid://cvoksqnx4m4jk" path="res://game_over_canvas_layer.tscn" id="2_lf2mf"]
 [ext_resource type="Texture2D" uid="uid://x8vbdofsyh57" path="res://level2.png" id="2_vd23k"]
 [ext_resource type="PackedScene" uid="uid://cepurusfmk1ru" path="res://Levels/enemyFollow2.tscn" id="4_vd23k"]
 [ext_resource type="PackedScene" uid="uid://bnq8bk3qbs4my" path="res://core.tscn" id="8_mbwna"]
 [ext_resource type="Texture2D" uid="uid://fc4w8y8voijj" path="res://spriteSheet78.png" id="8_vd23k"]
 [ext_resource type="Script" uid="uid://ug0u34x0s68j" path="res://Levels/area_2d_2.gd" id="9_lf2mf"]
 [ext_resource type="Script" uid="uid://cdwiqjoxi155f" path="res://core.gd" id="9_v023s"]
-[ext_resource type="PackedScene" path="res://goldAnimated.tscn" id="9_x7rwe"]
+[ext_resource type="PackedScene" uid="uid://diknirj7jlyv5" path="res://goldAnimated.tscn" id="9_x7rwe"]
 [ext_resource type="Texture2D" uid="uid://vbud0i3tr8o2" path="res://coinSpriteSheet.png" id="10_lf2mf"]
 
 [sub_resource type="Curve2D" id="Curve2D_w0h0a"]
@@ -93,6 +94,7 @@ size = Vector2(64, 64)
 
 [node name="Level2" type="Node2D" unique_id=1823012563]
 script = ExtResource("1_vd23k")
+game_over_scene = ExtResource("2_lf2mf")
 
 [node name="background_2" type="Sprite2D" parent="." unique_id=733659810]
 position = Vector2(512, 512)
@@ -101,7 +103,6 @@ texture = ExtResource("2_vd23k")
 [node name="Path2D2" type="Path2D" parent="." unique_id=1682369052]
 curve = SubResource("Curve2D_w0h0a")
 script = ExtResource("2_jglcl")
-spawnTime = null
 
 [node name="enemy2follow" parent="Path2D2" unique_id=2127768769 instance=ExtResource("4_vd23k")]
 position = Vector2(351.05667, 730.29285)

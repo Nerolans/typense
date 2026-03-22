@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://blh1l85sfnk8a"]
+
+[ext_resource type="Script" uid="uid://de5rcmcda8tk1" path="res://menu_canvas_layer.gd" id="1_lglyd"]
+
+[sub_resource type="Theme" id="Theme_wgva7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jtlml"]
+font_size = 80
+outline_size = 13
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ujql5"]
+bg_color = Color(0.7411765, 0.6313726, 0.8039216, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.9647059, 0.7176471, 0.77254903, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 20
+shadow_color = Color(1, 1, 1, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_reft1"]
+bg_color = Color(0.5686275, 0.827451, 0.92941177, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.5921569, 0.81960785, 0.7921569, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(1, 1, 1, 0.6)
+shadow_size = 5
+
+[node name="MenuCanvasLayer" type="CanvasLayer" unique_id=1464048272]
+script = ExtResource("1_lglyd")
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1020877891]
+offset_right = 1024.0
+offset_bottom = 1024.0
+color = Color(0.96862745, 0.9490196, 0.6509804, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1364072814]
+offset_left = 9.0
+offset_top = 10.0
+offset_right = 1011.0
+offset_bottom = 1014.0
+theme = SubResource("Theme_wgva7")
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=368349246]
+offset_left = 23.0
+offset_top = 28.0
+offset_right = 994.0
+offset_bottom = 1000.0
+color = Color(0.96862745, 0.9490196, 0.6509804, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1274623064]
+offset_right = 1024.0
+offset_bottom = 294.0
+text = "MENU :"
+label_settings = SubResource("LabelSettings_jtlml")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Button" type="Button" parent="." unique_id=1096706462]
+offset_left = 136.0
+offset_top = 332.0
+offset_right = 494.0
+offset_bottom = 658.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_ujql5")
+text = "LEVEL 1"
+
+[node name="Button2" type="Button" parent="." unique_id=1034228086]
+offset_left = 537.0
+offset_top = 332.0
+offset_right = 894.0
+offset_bottom = 660.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_reft1")
+text = "LEVEL 2"
+
+[node name="Label2" type="Label" parent="." unique_id=1152901931]
+offset_left = -104.0
+offset_top = 699.0
+offset_right = 920.0
+offset_bottom = 993.0
+label_settings = SubResource("LabelSettings_jtlml")
+horizontal_alignment = 1
+vertical_alignment = 2

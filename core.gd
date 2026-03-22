@@ -1,10 +1,13 @@
 extends AnimatedSprite2D
+signal game_over
 var lives = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 
+func loseLive():
+	lives -= 1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -18,5 +21,4 @@ func _process(delta: float) -> void:
 		play("1")
 	elif lives == 0:
 		play("0")
-		#GAME OVER HERE
-			
+		game_over.emit()

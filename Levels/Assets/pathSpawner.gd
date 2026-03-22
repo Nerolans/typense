@@ -66,4 +66,4 @@ func _input(event):
 				oldest.runSpeed = oldest.runSpeed * 1.2
 				
 func loseLive():
-	get_parent().loseLive()
+	get_parent().get_node("Core").loseLive()
